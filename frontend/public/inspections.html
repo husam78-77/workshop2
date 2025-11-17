@@ -203,14 +203,20 @@
         <!-- Footer -->
         <div id="footer" class="mt-auto"></div>
     </div>
-
-    <!-- Scripts -->
+    <!-- ✅ Load Bootstrap first -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ Load your custom script.js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Load components -->
     <script>
         async function loadComponent(id, file) {
             const res = await fetch(`components/${file}`);
-            document.getElementById(id).innerHTML = await res.text();
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
         }
+
         loadComponent("sidebar", "sidebar.html");
         loadComponent("header", "header.html");
         loadComponent("footer", "footer.html");

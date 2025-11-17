@@ -1,3 +1,89 @@
+/* =========================================================
+   SIDEBAR & PROFILE MENU FUNCTIONALITY
+========================================================= */
+
+// Wait for sidebar AND header elements to be available
+function initSidebar() {
+    const sidebar = document.getElementById("sidebarMenu");
+    const menu = document.getElementById("profileMenu");
+    const profileArea = document.querySelector(".sidebar-profile");
+    const toggleBtn = document.getElementById("sidebarToggle");
+
+    // If elements don't exist yet, try again in 100ms
+    if (!sidebar || !menu || !profileArea || !toggleBtn) {
+        setTimeout(initSidebar, 100);
+        return;
+    }
+
+    console.log("✅ Sidebar and header loaded, initializing...");
+
+    // Close menu
+    function closeMenu() {
+        menu.classList.remove("open");
+    }
+
+    // Open menu
+    function openMenu() {
+        menu.classList.add("open");
+    }
+
+    // Toggle menu
+    function toggleMenu() {
+        menu.classList.toggle("open");
+    }
+
+    // Main click handler for sidebar/profile
+    document.addEventListener("click", (e) => {
+        // Toggle sidebar button
+        if (e.target.closest("#sidebarToggle")) {
+            document.body.classList.toggle("sidebar-collapsed");
+            closeMenu();
+            return;
+        }
+
+        // Check if clicked inside profile area
+        const clickedProfile = e.target.closest(".sidebar-profile");
+
+        if (clickedProfile) {
+            // Prevent default for profile trigger
+            const profileLink = e.target.closest(".profile-trigger");
+            if (profileLink) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // If sidebar is collapsed, expand it first
+                if (document.body.classList.contains("sidebar-collapsed")) {
+                    document.body.classList.remove("sidebar-collapsed");
+                    setTimeout(openMenu, 250);
+                } else {
+                    // Toggle menu
+                    toggleMenu();
+                }
+            }
+        } else {
+            // Clicked outside - close menu
+            closeMenu();
+        }
+    });
+
+    // Set active nav item based on current page
+    setActiveNavItem();
+}
+
+// Set active navigation item
+function setActiveNavItem() {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+}
+
+// Start sidebar initialization
+initSidebar();
 /* ------------------------------------------------------
    B3 — SMART CONTEXT EXTRACTION (FINAL VERSION)
 --------------------------------------------------------- */
@@ -225,3 +311,5 @@ document.addEventListener("click", (e) => {
         })
     });
 });
+
+

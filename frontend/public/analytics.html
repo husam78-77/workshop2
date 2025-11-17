@@ -137,8 +137,11 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- ✅ Load your custom script.js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Load components -->
     <script>
-        // Load Components
         async function loadComponent(id, file) {
             const res = await fetch(`components/${file}`);
             const html = await res.text();

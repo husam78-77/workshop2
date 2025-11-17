@@ -207,8 +207,13 @@
         <div id="footer" class="mt-auto"></div>
     </div>
 
+    <!-- ✅ Load Bootstrap first -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
+    <!-- ✅ Load your custom script.js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Load components -->
     <script>
         async function loadComponent(id, file) {
             const res = await fetch(`components/${file}`);
