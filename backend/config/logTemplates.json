@@ -1,0 +1,173 @@
+{
+    "Authentication": {
+        "nameFields": [
+            "username",
+            "email"
+        ],
+        "idFields": [
+            "id",
+            "userId"
+        ],
+        "altFields": [],
+        "templates": {
+            "login": "User logged in",
+            "logout": "User logged out",
+            "create": "User logged in",
+            "delete": "User logged out"
+        }
+    },
+    "User Management": {
+        "nameFields": [
+            "name",
+            "fullName",
+            "username"
+        ],
+        "idFields": [
+            "id",
+            "userId",
+            "insertId"
+        ],
+        "altFields": [],
+        "templates": {
+            "create": "Created user {name} (#{id})",
+            "update": "Updated user {name} (#{id})",
+            "delete": "Deleted user {name} (#{id})"
+        }
+    },
+    "Inspection Records": {
+        "nameFields": [
+            "inspection_title",
+            "title",
+            "name"
+        ],
+        "idFields": [
+            "id",
+            "inspectionId",
+            "record_id"
+        ],
+        "altFields": [
+            "vessel_name",
+            "vessel",
+            "inspection_date"
+        ],
+        "templates": {
+            "create": "Created inspection #{id} ({title})",
+            "update": "Updated inspection #{id} (vessel: {vessel})",
+            "delete": "Deleted inspection #{id} ({title})",
+            "approve": "Approved inspection #{id}",
+            "reject": "Rejected inspection #{id}"
+        }
+    },
+    "Auto Report Generation": {
+        "nameFields": [
+            "title",
+            "report_name",
+            "name"
+        ],
+        "idFields": [
+            "id",
+            "reportId",
+            "record_id"
+        ],
+        "altFields": [
+            "inspection_date",
+            "vessel_name"
+        ],
+        "templates": {
+            "create": "Generated report #{id} ({title})",
+            "update": "Updated report #{id} ({title})",
+            "delete": "Deleted report #{id} ({title})"
+        }
+    },
+    "Inspection Scheduling": {
+        "nameFields": [
+            "task_name",
+            "schedule_title",
+            "name"
+        ],
+        "idFields": [
+            "id",
+            "scheduleId",
+            "taskId"
+        ],
+        "altFields": [
+            "dueDate",
+            "assignee",
+            "inspector"
+        ],
+        "templates": {
+            "create": "Created schedule #{id}",
+            "update": "Updated schedule #{id}",
+            "delete": "Deleted schedule #{id}",
+            "approve": "Approved schedule #{id}",
+            "reject": "Rejected schedule #{id}"
+        }
+    },
+    "Reference Data": {
+        "nameFields": [
+            "value",
+            "name",
+            "title"
+        ],
+        "idFields": [
+            "id"
+        ],
+        "altFields": [],
+        "templates": {
+            "create": "Added reference item '{name}'",
+            "update": "Updated reference item '{name}'",
+            "delete": "Deleted reference item '{name}'"
+        }
+    },
+    "Dashboard & Analytics": {
+        "nameFields": [],
+        "idFields": [],
+        "altFields": [],
+        "templates": {
+            "view": "Viewed analytics dashboard",
+            "create": "Updated analytics data",
+            "update": "Updated analytics data"
+        }
+    },
+    "Notification & Alerts": {
+        "nameFields": [
+            "title",
+            "message"
+        ],
+        "idFields": [
+            "id",
+            "notificationId"
+        ],
+        "altFields": [],
+        "templates": {
+            "create": "Created notification '{title}'",
+            "update": "Updated notification '{title}'",
+            "delete": "Deleted notification '{title}'"
+        }
+    },
+    "Activity Log": {
+        "nameFields": [],
+        "idFields": [],
+        "altFields": [],
+        "templates": {
+            "view": "Viewed activity logs",
+            "create": "New activity log entry"
+        }
+    },
+    "General": {
+        "nameFields": [
+            "name",
+            "title"
+        ],
+        "idFields": [
+            "id",
+            "insertId"
+        ],
+        "altFields": [],
+        "templates": {
+            "create": "Performed create on {module} #{id}",
+            "update": "Performed update on {module} #{id}",
+            "delete": "Performed delete on {module} #{id}"
+        }
+    }
+}

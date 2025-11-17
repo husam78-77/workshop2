@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-blue: #0a1f44;
+            --accent-blue: #1e5fdc;
+            --light-blue: #2563eb;
+            --hover-blue: #1d4ed8;
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --danger-gradient: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+            --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        body {
+            background: #f1f5f9;
+            min-height: 100vh;
+        }
+
+        .page-content {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(30, 95, 220, 0.3);
+        }
+
+        .page-header h4 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.95;
+            font-size: 1rem;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-card.high {
+            border-left-color: #ee0979;
+        }
+
+        .stat-card.medium {
+            border-left-color: #f5576c;
+        }
+
+        .stat-card.low {
+            border-left-color: #11998e;
+        }
+
+        .stat-card.total {
+            border-left-color: var(--accent-blue);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-select {
+            border-radius: 8px;
+            border: 2px solid #e0e7ff;
+            padding: 0.6rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-select:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 0.2rem rgba(30, 95, 220, 0.15);
+        }
+
+        .search-input {
+            border-radius: 8px;
+            border: 2px solid #e0e7ff;
+            padding: 0.6rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 0.2rem rgba(30, 95, 220, 0.15);
+            outline: none;
+        }
+
+        .table-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .table {
+            margin: 0;
+        }
+
+        .table thead th {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            border: none;
+            padding: 1rem;
+        }
+
+        .table tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f8f9ff;
+            transform: scale(1.01);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .table tbody td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .badge-importance {
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+
+        .badge-high {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(238, 9, 121, 0.3);
+        }
+
+        .badge-medium {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(245, 87, 108, 0.3);
+        }
+
+        .badge-low {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(17, 153, 142, 0.3);
+        }
+
+        .module-badge {
+            background: #e0e7ff;
+            color: var(--accent-blue);
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pagination-btn {
+            min-width: 32px;
+        }
+
+        .user-id {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #6c757d;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+
+            0%,
+            20% {
+                content: '.';
+            }
+
+            40% {
+                content: '..';
+            }
+
+            60%,
+            100% {
+                content: '...';
+            }
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 3rem;
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div id="sidebar"></div>
+
+    <div class="main-wrapper d-flex flex-column flex-grow-1">
+        <div id="header"></div>
+
+        <main class="page-content p-4">
+            <div class="container-fluid">
+
+                <div class="page-header">
+                    <h4>📊 Activity Log Dashboard</h4>
+                    <p>Monitor and track all system activities</p>
+                </div>
+
+                <!-- Statistics Cards -->
+                <div class="stats-container" id="statsContainer">
+                    <div class="stat-card total">
+                        <p class="stat-number" id="totalLogs">0</p>
+                        <p class="stat-label">Total Activities</p>
+                    </div>
+                    <div class="stat-card high">
+                        <p class="stat-number" id="highCount">0</p>
+                        <p class="stat-label">High Priority</p>
+                    </div>
+                    <div class="stat-card medium">
+                        <p class="stat-number" id="mediumCount">0</p>
+                        <p class="stat-label">Medium Priority</p>
+                    </div>
+                    <div class="stat-card low">
+                        <p class="stat-number" id="lowCount">0</p>
+                        <p class="stat-label">Low Priority</p>
+                    </div>
+                </div>
+
+
+                <!-- Filters -->
+                <div class="filter-section mb-3 p-3 bg-white rounded shadow-sm">
+
+                    <div class="row g-3">
+
+                        <!-- Search -->
+                        <div class="col-md-4">
+                            <label class="fw-bold">🔍 Search</label>
+                            <input type="text" id="searchInput" class="form-control" placeholder="Search anything...">
+                        </div>
+
+                        <!-- Filter module -->
+                        <div class="col-md-4">
+                            <label class="fw-bold">📂 Filter by Module</label>
+                            <select id="filterModule" class="form-select">
+                                <option value="">All Modules</option>
+                                <option value="Authentication">Authentication</option>
+                                <option value="User Management">User Management</option>
+                                <option value="Inspection Records">Inspection Records</option>
+                                <option value="Auto Report Generation">Auto Report Generation</option>
+                                <option value="Reference Data">Reference Data</option>
+                                <option value="Dashboard & Analytics">Dashboard & Analytics</option>
+                                <option value="Notification & Alerts">Notification & Alerts</option>
+                                <option value="Activity Log">Activity Log</option>
+                            </select>
+                        </div>
+
+                        <!-- Filter priority -->
+                        <div class="col-md-4">
+                            <label class="fw-bold">⚠️ Filter by Priority</label>
+                            <select id="filterPriority" class="form-select">
+                                <option value="">All</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Table -->
+                <div class="table-responsive bg-white shadow-sm rounded">
+                    <table class="table table-hover" id="logTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortAndDisplay('id')">ID</th>
+                                <th onclick="sortAndDisplay('user_id')">User ID</th>
+                                <th onclick="sortAndDisplay('action')">Action</th>
+                                <th onclick="sortAndDisplay('module')">Module</th>
+                                <th onclick="sortAndDisplay('importance')">Importance</th>
+                                <th onclick="sortAndDisplay('created_at')">Timestamp</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="7" class="text-center py-4">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="pagination" class="mt-3 text-center"></div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div id="footer" class="mt-auto"></div>
+    </div>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /* ---------- load components (sidebar/header/footer) ---------- */
+        async function loadComponent(id, file) {
+            try {
+                const res = await fetch(`/components/${file}`);
+                if (!res.ok) throw new Error('Failed to load ' + file);
+                const html = await res.text();
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = html;
+            } catch (err) {
+                console.warn(`Component ${file} not loaded:`, err.message);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadComponent("sidebar", "sidebar.html");
+            loadComponent("header", "header.html");
+            loadComponent("footer", "footer.html");
+        });
+
+
+
+        // =====================================
+        // GLOBAL STATE
+        // =====================================
+
+        let allLogs = [];
+        let currentPage = 1;
+        let pageSize = 15;
+        let currentSort = { column: "id", direction: "desc" };
+
+        // =====================================
+        // FETCH LOGS FROM BACKEND
+        // =====================================
+        async function loadLogs() {
+            try {
+                const res = await fetch("http://localhost:5000/api/activity/all");
+                let data = await res.json();
+
+                if (!Array.isArray(data)) {
+                    console.warn("API returned non-array. Normalizing...");
+                    data = [];
+                }
+
+                allLogs = data;
+
+                updateStats(allLogs);
+                applyFilters();
+
+            } catch (error) {
+                console.error("Failed to load logs:", error);
+            }
+        }
+
+
+        setInterval(loadLogs, 2000);
+        loadLogs();
+
+        // =====================================
+        // SORTING SYSTEM
+        // =====================================
+
+        function sortLogs(logs, column) {
+            if (currentSort.column === column) {
+                currentSort.direction = currentSort.direction === "asc" ? "desc" : "asc";
+            } else {
+                currentSort.column = column;
+                currentSort.direction = "asc";
+            }
+
+            return logs.sort((a, b) => {
+                if (a[column] < b[column]) return currentSort.direction === "asc" ? -1 : 1;
+                if (a[column] > b[column]) return currentSort.direction === "asc" ? 1 : -1;
+                return 0;
+            });
+        }
+
+        function sortAndDisplay(column) {
+            let sorted = sortLogs([...allLogs], column);
+            displayLogs(sorted);
+        }
+
+        // =====================================
+        // FILTERING SYSTEM
+        // =====================================
+        function updateStats(logs) {
+            document.getElementById("totalLogs").textContent = logs.length;
+            document.getElementById("highCount").textContent = logs.filter(l => l.importance === "High").length;
+            document.getElementById("mediumCount").textContent = logs.filter(l => l.importance === "Medium").length;
+            document.getElementById("lowCount").textContent = logs.filter(l => l.importance === "Low").length;
+        }
+
+        function applyFilters() {
+            const search = document.getElementById("searchInput").value.toLowerCase();
+            const selectedModule = document.getElementById("filterModule").value;
+            const selectedPriority = document.getElementById("filterPriority").value;
+
+            let filtered = [...allLogs];
+
+            if (search) {
+                filtered = filtered.filter(log =>
+                    JSON.stringify(log).toLowerCase().includes(search)
+                );
+            }
+
+            if (selectedModule) {
+                filtered = filtered.filter(log => log.module === selectedModule);
+            }
+
+            if (selectedPriority) {
+                filtered = filtered.filter(log => log.importance === selectedPriority);
+            }
+
+            displayLogs(filtered);
+        }
+
+        // =====================================
+        // PAGINATION
+        // =====================================
+
+        function updatePagination(total) {
+            let totalPages = Math.ceil(total / pageSize);
+            let wrapper = document.getElementById("pagination");
+
+            wrapper.innerHTML = "";
+
+            for (let i = 1; i <= totalPages; i++) {
+                wrapper.innerHTML += `
+                <button class="btn pagination-btn ${i === currentPage ? "btn-primary" : "btn-outline-primary"}"
+                    onclick="goToPage(${i})">${i}</button>
+            `;
+            }
+        }
+
+        function goToPage(page) {
+            currentPage = page;
+            applyFilters();
+        }
+
+        // =====================================
+        // DISPLAY TABLE
+        // =====================================
+
+        function displayLogs(logs) {
+            const tbody = document.querySelector("#logTable tbody");
+
+            if (logs.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4">No logs found</td></tr>`;
+                return;
+            }
+
+            const start = (currentPage - 1) * pageSize;
+            const end = start + pageSize;
+
+            const pageData = logs.slice(start, end);
+
+            tbody.innerHTML = "";
+
+            pageData.forEach(log => {
+
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                <td>#${log.id}</td>
+                <td>${log.user_id ?? "-"}</td>
+                <td>${log.action}</td>
+                <td><span class="module-badge">${log.module}</span></td>
+                <td>${log.importance}</td>
+                <td>${new Date(log.created_at).toLocaleString()}</td>
+                <td>
+                    <button class="btn btn-sm btn-secondary" onclick='showMeta(${JSON.stringify(log.meta)})'>
+                        View
+                    </button>
+                </td>
+            `;
+
+                tbody.appendChild(row);
+            });
+
+            updatePagination(logs.length);
+        }
+
+        // =====================================
+        // META VIEWER
+        // =====================================
+
+        function showMeta(meta) {
+            alert(JSON.stringify(meta, null, 2));
+        }
+
+    </script>
+
+</body>
+
+</html>

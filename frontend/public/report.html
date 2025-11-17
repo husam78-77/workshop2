@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE TITLE HERE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper d-flex flex-column flex-grow-1">
+
+        <!-- Header -->
+        <div id="header"></div>
+
+        <!-- Page Content -->
+        <main class="page-content p-4">
+            <div class="container-fluid">
+
+                <!-- 👇 هنا تضيف محتوى الصفحة بس -->
+                <h4 class="fw-bold mb-4">PAGE TITLE HERE</h4>
+
+                <!-- المحتوى الخاص بالصفحة هنا -->
+                <!-- … -->
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div id="footer" class="mt-auto"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Load components -->
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(`components/${file}`);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+        loadComponent("sidebar", "sidebar.html");
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+
+</html>

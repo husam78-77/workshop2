@@ -1,0 +1,217 @@
+/* Sidebar custom styling */
+#sidebarMenu {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #0d6efd !important;
+    color: #fff !important;
+    border-radius: 6px;
+}
+
+/* Header + Footer Styling */
+.navbar {
+    z-index: 999;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Sidebar collapse animation for mobile */
+#sidebarMenu {
+    transition: all 0.3s ease;
+}
+
+/* === Sidebar Styling (Refined) === */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    transition: width 0.3s ease;
+    background-color: #212529;
+    /* dark */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem 0.6rem;
+    overflow: visible !important;
+
+}
+
+/* Sidebar links */
+.sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+/* Hover / Active effects */
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #0d6efd;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.sidebar a i {
+    font-size: 1.25rem;
+    width: 26px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+/* Hover zoom on icon only */
+.sidebar a:hover i {
+    transform: scale(1.15);
+}
+
+/* --- Collapsed state --- */
+body.sidebar-collapsed .sidebar {
+    width: 80px;
+    padding: 1rem 0.4rem;
+}
+
+/* نخفي النصوص */
+/* أخفي النصوص في الوضع المصغّر */
+body.sidebar-collapsed .sidebar a span {
+    display: none !important;
+    /* ✅ Changed from opacity to display:none */
+}
+
+/* ✨ لكن العنصر active يُظهر النص */
+
+/* نخلي الأيقونات تبقى في النص */
+body.sidebar-collapsed .sidebar a {
+    justify-content: center;
+    gap: 0;
+    padding: 8px;
+}
+
+/* لما نمر الماوس على الأيقونة — نضيف tooltip-like bubble */
+body.sidebar-collapsed .sidebar .nav-link:hover::after {
+    content: attr(data-label);
+    position: absolute;
+    left: 70px;
+    /* ✅ Adjusted from 85px */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    pointer-events: none;
+}
+
+
+/* العنصر المحدد يبرز حتى وهو مصغّر */
+body.sidebar-collapsed .sidebar a.active {
+    background-color: #0d6efd;
+    color: #fff;
+    transform: scale(1.05);
+    border-radius: 8px;
+}
+
+/* عند hover للسايدبار ككل، ما يوسع العرض */
+body.sidebar-collapsed .sidebar:hover {
+    width: 80px;
+}
+
+/* --- Main Content Spacing --- */
+.main-wrapper {
+    margin-left: 260px;
+    transition: margin-left 0.3s ease;
+}
+
+body.sidebar-collapsed .main-wrapper {
+    margin-left: 80px;
+}
+
+/* --- Responsive fix --- */
+@media (max-width: 992px) {
+    .main-wrapper {
+        margin-left: 0 !important;
+    }
+
+    .sidebar {
+        position: fixed;
+        z-index: 1050;
+    }
+}
+
+/* Profile area text hidden when sidebar collapsed */
+body.sidebar-collapsed .sidebar-profile .user-name {
+    display: none !important;
+    /* ✅ Changed to display:none */
+}
+
+body.sidebar-collapsed .sidebar a.active i {
+    margin: 0;
+}
+
+/* Keep avatar centered */
+.sidebar-profile a {
+    gap: 8px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Adjust alignment when collapsed */
+body.sidebar-collapsed .sidebar-profile a {
+    justify-content: center;
+    padding: 8px;
+}
+
+body.sidebar-collapsed .sidebar-profile .dropdown-menu {
+    left: 70px;
+    /* ✅ Adjusted position */
+    top: auto;
+    bottom: 10px;
+}
+
+/* Disable tooltip for profile section */
+.sidebar-profile a:hover::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Profile dropdown position */
+.sidebar-profile .dropdown-menu {
+    position: absolute;
+    left: 100%;
+    bottom: 10px;
+    margin-left: 10px;
+    display: none;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+}
+
+.sidebar-profile .dropdown-menu.open {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sidebar-profile .dropdown-item {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}

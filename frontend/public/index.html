@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Vessel Inspection System</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <style>
+        .summary-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+        }
+
+        .recent-item {
+            border-radius: 10px;
+            padding: 18px;
+            background: white;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper d-flex flex-column flex-grow-1">
+
+        <!-- Header -->
+        <div id="header"></div>
+
+        <!-- Page Content -->
+        <main class="page-content p-4">
+            <div class="container-fluid">
+
+                <!-- Welcome Header -->
+                <div class="mb-4">
+                    <h4 class="fw-bold">Welcome back, John Inspector!</h4>
+                    <p class="text-muted">Here's your inspection overview for today</p>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-3">
+                        <div class="summary-card">
+                            <p class="text-muted small mb-1">Total Inspections</p>
+                            <h3 class="fw-bold">328</h3>
+                            <p class="text-success small">↑ +12.5% from last month</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="summary-card">
+                            <p class="text-muted small mb-1">Completed</p>
+                            <h3 class="fw-bold">289</h3>
+                            <p class="text-muted small">88% completion rate</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="summary-card">
+                            <p class="text-muted small mb-1">Pending Review</p>
+                            <h3 class="fw-bold text-warning">24</h3>
+                            <p class="text-warning small">Requires attention</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="summary-card">
+                            <p class="text-muted small mb-1">Overdue</p>
+                            <h3 class="fw-bold text-danger">15</h3>
+                            <p class="text-danger small">Immediate action needed</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Feature Cards -->
+                <div class="row g-3 mb-4">
+
+                    <!-- AI Generator -->
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <h6 class="fw-bold">AI Report Generator</h6>
+                            <p class="text-muted small">Upload inspection photos, generate reports.</p>
+
+                            <p class="small">Upload inspection photos and let AI automatically analyze and generate
+                                detailed reports.</p>
+
+                            <button class="btn btn-dark w-100 mt-2">Try AI Generator →</button>
+                        </div>
+                    </div>
+
+                    <!-- Analytics -->
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <h6 class="fw-bold">Analytics Dashboard</h6>
+                            <p class="text-muted small">View detailed charts and insights</p>
+
+                            <p class="small">Explore comprehensive analytics including trends, completion rates, and
+                                performance insights.</p>
+
+                            <button class="btn btn-outline-dark w-100 mt-2" onclick="location.href='analytics.html'">
+                                Go to Analytics →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Export Reports -->
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <h6 class="fw-bold">Export Reports</h6>
+                            <p class="text-muted small">Generate and download reports</p>
+
+                            <p class="small">Export inspection reports to PDF, Excel, or CSV with custom filters and
+                                date ranges.</p>
+
+                            <button class="btn btn-outline-dark w-100 mt-2" onclick="location.href='export.html'">
+                                Export Reports →
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Recent Inspections -->
+                <div class="d-flex justify-content-between mb-2">
+                    <h6 class="fw-bold">Recent Inspections</h6>
+                    <a href="inspections.html" class="text-primary small">View All →</a>
+                </div>
+
+                <div>
+
+                    <div class="recent-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>INS-2025-001 — Annual Safety</strong><br>
+                            <span class="text-muted small">MV Ocean Star</span>
+                        </div>
+                        <span class="badge bg-warning">Pending Review</span>
+                    </div>
+
+                    <div class="recent-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>INS-2025-002 — Hull Inspection</strong><br>
+                            <span class="text-muted small">SS Maritime Hope</span>
+                        </div>
+                        <span class="badge bg-success">Approved</span>
+                    </div>
+
+                    <div class="recent-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>INS-2025-003 — Equipment Check</strong><br>
+                            <span class="text-muted small">MV Sea Eagle</span>
+                        </div>
+                        <span class="badge bg-info text-dark">In Progress</span>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Buttons -->
+                <div class="d-flex gap-3 mt-4">
+
+                    <button class="btn btn-dark flex-fill py-3">
+                        <i class="bi bi-plus-circle me-2"></i> Create Inspection
+                    </button>
+
+                    <button class="btn btn-light flex-fill py-3">
+                        <i class="bi bi-stars me-2"></i> AI Generator
+                    </button>
+
+                    <button class="btn btn-light flex-fill py-3">
+                        <i class="bi bi-clock-history me-2"></i> Pending Reviews
+                    </button>
+
+                    <button class="btn btn-light flex-fill py-3">
+                        <i class="bi bi-bar-chart me-2"></i> Analytics
+                    </button>
+
+                    <button class="btn btn-light flex-fill py-3">
+                        <i class="bi bi-download me-2"></i> Export Reports
+                    </button>
+
+                </div>
+
+            </div>
+        </main>
+
+        <div id="footer" class="mt-auto"></div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(`components/${file}`);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadComponent("sidebar", "sidebar.html");
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+
+</html>

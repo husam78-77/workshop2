@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Data</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .ref-tab {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 6px 14px;
+            margin-right: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .ref-tab.active {
+            background: #e3e7ff;
+            color: #2f3cff;
+            font-weight: 600;
+        }
+
+        .ref-item {
+            background: #fff;
+            padding: 18px 22px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 14px;
+        }
+
+        .ref-code-box {
+            font-weight: 700;
+            border: 2px solid #ccc;
+            padding: 6px 14px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-right: 14px;
+        }
+
+        .ref-actions i {
+            font-size: 18px;
+            cursor: pointer;
+            margin-left: 10px;
+            color: #6c757d;
+        }
+
+        .ref-actions i:hover {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper d-flex flex-column flex-grow-1">
+
+        <!-- Header -->
+        <div id="header"></div>
+
+        <!-- Page Content -->
+        <main class="page-content p-4">
+            <div class="container-fluid">
+
+                <!-- Title -->
+                <h4 class="fw-bold mb-1">Reference Data</h4>
+                <p class="text-muted mb-4">Manage centralized reference data for inspections</p>
+
+                <!-- Tabs -->
+                <div class="d-flex mb-3">
+                    <div class="ref-tab active">Vessel Types</div>
+                    <div class="ref-tab">Inspection Categories</div>
+                    <div class="ref-tab">Remark Templates</div>
+
+                    <button class="btn btn-dark ms-auto">
+                        <i class="bi bi-plus-lg"></i> Add Vessel Type
+                    </button>
+                </div>
+
+                <!-- Search -->
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50" placeholder="Search vessel types...">
+                </div>
+
+                <!-- LIST ITEMS -->
+
+                <!-- 1 -->
+                <div class="ref-item d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="ref-code-box">CARGO</div>
+                        <div>
+                            <div class="fw-bold">Cargo Ship</div>
+                            <div class="text-muted small">General cargo vessels</div>
+                        </div>
+                    </div>
+
+                    <div class="text-end">
+                        <div class="text-muted small mb-2">145 Vessels</div>
+
+                        <div class="ref-actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="ref-item d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="ref-code-box">CONTAINER</div>
+                        <div>
+                            <div class="fw-bold">Container Ship</div>
+                            <div class="text-muted small">Container transport vessels</div>
+                        </div>
+                    </div>
+
+                    <div class="text-end">
+                        <div class="text-muted small mb-2">89 Vessels</div>
+
+                        <div class="ref-actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="ref-item d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="ref-code-box">TANKER</div>
+                        <div>
+                            <div class="fw-bold">Tanker</div>
+                            <div class="text-muted small">Oil and chemical tankers</div>
+                        </div>
+                    </div>
+
+                    <div class="text-end">
+                        <div class="text-muted small mb-2">67 Vessels</div>
+
+                        <div class="ref-actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="ref-item d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="ref-code-box">BULK</div>
+                        <div>
+                            <div class="fw-bold">Bulk Carrier</div>
+                            <div class="text-muted small">Bulk cargo vessels</div>
+                        </div>
+                    </div>
+
+                    <div class="text-end">
+                        <div class="text-muted small mb-2">52 Vessels</div>
+
+                        <div class="ref-actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="ref-item d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="ref-code-box">PASSENGER</div>
+                        <div>
+                            <div class="fw-bold">Passenger Ship</div>
+                            <div class="text-muted small">Passenger transport vessels</div>
+                        </div>
+                    </div>
+
+                    <div class="text-end">
+                        <div class="text-muted small mb-2">23 Vessels</div>
+
+                        <div class="ref-actions">
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div id="footer" class="mt-auto"></div>
+
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(`components/${file}`);
+            document.getElementById(id).innerHTML = await res.text();
+        }
+
+        loadComponent("sidebar", "sidebar.html");
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+
+</html>

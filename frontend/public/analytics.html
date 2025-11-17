@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+
+    <style>
+        .metric-card {
+            padding: 18px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .tab-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .tab-btn.active {
+            background: #0d6efd;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+
+    <div class="main-wrapper d-flex flex-column flex-grow-1">
+
+        <!-- Header -->
+        <div id="header"></div>
+
+        <!-- Page Content -->
+        <main class="page-content p-4">
+            <div class="container-fluid">
+
+                <!-- Page Title -->
+                <h4 class="fw-bold mb-1">Analytics Dashboard</h4>
+                <p class="text-muted mb-4">Comprehensive inspection data and performance metrics</p>
+
+                <!-- Header Buttons -->
+                <div class="d-flex justify-content-end mb-3 gap-2">
+                    <button class="btn btn-outline-secondary">
+                        Last 6 Months
+                    </button>
+                    <button class="btn btn-dark">
+                        <i class="bi bi-download"></i> Export Analytics
+                    </button>
+                </div>
+
+                <!-- Tabs -->
+                <div class="d-flex gap-2 mb-4">
+                    <div class="tab-btn active">Overview</div>
+                    <div class="tab-btn">Trends</div>
+                    <div class="tab-btn">Performance</div>
+                    <div class="tab-btn">Findings</div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <p class="text-muted small">Total Inspections</p>
+                            <h4 class="fw-bold">328</h4>
+                            <span class="text-success small">↑ +12.5%</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <p class="text-muted small">Avg Completion Time</p>
+                            <h4 class="fw-bold">2.7 days</h4>
+                            <span class="text-success small">↑ +8.2%</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <p class="text-muted small">Completion Rate</p>
+                            <h4 class="fw-bold">88.4%</h4>
+                            <span class="text-success small">↑ +3.1%</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="metric-card">
+                            <p class="text-muted small">Total Findings</p>
+                            <h4 class="fw-bold">138</h4>
+                            <span class="text-danger small">↓ -5.4%</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Charts -->
+                <div class="row g-3">
+
+                    <!-- Pie Chart -->
+                    <div class="col-lg-6">
+                        <div class="card p-3 shadow-sm">
+                            <h6 class="fw-bold mb-2">Inspection Status Distribution</h6>
+                            <p class="text-muted small">Breakdown by current status</p>
+                            <canvas id="statusPie" height="180"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Bar Chart -->
+                    <div class="col-lg-6">
+                        <div class="card p-3 shadow-sm">
+                            <h6 class="fw-bold mb-2">Inspections by Vessel Type</h6>
+                            <p class="text-muted small">Distribution across vessel categories</p>
+                            <canvas id="vesselBar" height="180"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <div id="footer" class="mt-auto"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Load Components
+        async function loadComponent(id, file) {
+            const res = await fetch(`components/${file}`);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadComponent("sidebar", "sidebar.html");
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+
+        // Charts
+        new Chart(document.getElementById("statusPie"), {
+            type: "pie",
+            data: {
+                labels: ["Completed", "Pending Review", "In Progress", "Overdue"],
+                datasets: [{
+                    data: [88, 7, 3, 2],
+                    backgroundColor: ["#4CAF50", "#FFC107", "#17A2B8", "#FF4D4D"]
+                }]
+            }
+        });
+
+        new Chart(document.getElementById("vesselBar"), {
+            type: "bar",
+            data: {
+                labels: ["Cargo Ship", "Container Ship", "Tanker", "Bulk Carrier", "Passenger Ship"],
+                datasets: [{
+                    label: "Inspections",
+                    data: [150, 120, 90, 70, 30],
+                    backgroundColor: "#0d6efd"
+                }]
+            },
+            options: { responsive: true }
+        });
+    </script>
+
+</body>
+
+</html>
