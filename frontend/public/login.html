@@ -1,43 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Login Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Inspection Report System</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <style>
+        body {
+            background: #f1f5f9;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+    </style>
 </head>
 
-<body>
+<body class="d-flex align-items-center justify-content-center vh-100">
 
-    <h2>Login Test Page</h2>
+    <div class="login-card">
 
-    <form id="loginForm">
-        <label>Username:</label><br>
-        <input type="text" id="username"><br><br>
+        <h4 class="fw-bold mb-3">Welcome Back</h4>
+        <p class="text-muted mb-4">Login to continue</p>
 
-        <label>Password:</label><br>
-        <input type="password" id="password"><br><br>
+        <div id="errorBox" class="alert alert-danger d-none py-2">Invalid username or password</div>
 
-        <button type="submit">Login</button>
-    </form>
+        <!-- Login Form -->
+        <form id="loginForm">
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Username</label>
+                <input type="text" id="username" class="form-control" placeholder="Enter username" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-semibold">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+            </div>
+
+            <button class="btn btn-primary w-100" type="submit">
+                <i class="bi bi-box-arrow-in-right me-1"></i> Login
+            </button>
+
+        </form>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", async (e) => {
             e.preventDefault();
 
-            const res = await fetch("/api/auth/login", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    username: document.getElementById("username").value,
-                    password: document.getElementById("password").value
-                })
-            });
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const errorBox = document.getElementById("errorBox");
 
-            const data = await res.json();
-            alert(JSON.stringify(data));
+            try {
+                const res = await fetch("/api/auth/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    window.location.href = "index.html";
+                } else {
+                    errorBox.classList.remove("d-none");
+                }
+
+            } catch (err) {
+                console.error("Login error:", err);
+                errorBox.classList.remove("d-none");
+            }
         });
     </script>
 
+    <!-- UI Auto Logger -->
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

@@ -86,28 +86,23 @@ body.sidebar-collapsed .sidebar {
     padding: 1rem 0.4rem;
 }
 
-/* نخفي النصوص */
-/* أخفي النصوص في الوضع المصغّر */
+
 body.sidebar-collapsed .sidebar a span {
     display: none !important;
     /* ✅ Changed from opacity to display:none */
 }
 
-/* ✨ لكن العنصر active يُظهر النص */
 
-/* نخلي الأيقونات تبقى في النص */
 body.sidebar-collapsed .sidebar a {
     justify-content: center;
     gap: 0;
     padding: 8px;
 }
 
-/* لما نمر الماوس على الأيقونة — نضيف tooltip-like bubble */
 body.sidebar-collapsed .sidebar .nav-link:hover::after {
     content: attr(data-label);
     position: absolute;
     left: 70px;
-    /* ✅ Adjusted from 85px */
     top: 50%;
     transform: translateY(-50%);
     background-color: #0d6efd;
@@ -122,7 +117,6 @@ body.sidebar-collapsed .sidebar .nav-link:hover::after {
 }
 
 
-/* العنصر المحدد يبرز حتى وهو مصغّر */
 body.sidebar-collapsed .sidebar a.active {
     background-color: #0d6efd;
     color: #fff;
@@ -130,7 +124,6 @@ body.sidebar-collapsed .sidebar a.active {
     border-radius: 8px;
 }
 
-/* عند hover للسايدبار ككل، ما يوسع العرض */
 body.sidebar-collapsed .sidebar:hover {
     width: 80px;
 }
@@ -160,7 +153,6 @@ body.sidebar-collapsed .main-wrapper {
 /* Profile area text hidden when sidebar collapsed */
 body.sidebar-collapsed .sidebar-profile .user-name {
     display: none !important;
-    /* ✅ Changed to display:none */
 }
 
 body.sidebar-collapsed .sidebar a.active i {
@@ -182,7 +174,6 @@ body.sidebar-collapsed .sidebar-profile a {
 
 body.sidebar-collapsed .sidebar-profile .dropdown-menu {
     left: 70px;
-    /* ✅ Adjusted position */
     top: auto;
     bottom: 10px;
 }

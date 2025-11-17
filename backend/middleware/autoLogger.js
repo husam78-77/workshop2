@@ -11,9 +11,7 @@ const __dirname = path.dirname(__filename);
 const templatesPath = path.join(__dirname, "..", "config", "logTemplates.json");
 const LOG_TEMPLATES = JSON.parse(fs.readFileSync(templatesPath, "utf8"));
 
-/* -----------------------------------------------------------
-   Helpers
------------------------------------------------------------ */
+/* -Helpers*/
 
 // pick the first valid field from candidates
 function pickField(obj, fields) {

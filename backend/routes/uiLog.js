@@ -3,7 +3,6 @@ import db from "../config/db.js";
 
 const router = express.Router();
 
-/* SMART MESSAGE BUILDER */
 function buildSmartMessage(action, moduleName, meta) {
     let name = meta?.row?.name || meta?.form?.name || "";
     let id = meta?.row?.id || meta?.form?.id || meta?.record_id || "";

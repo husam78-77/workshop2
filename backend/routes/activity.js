@@ -3,7 +3,6 @@ import db from "../config/db.js";
 
 const router = express.Router();
 
-// 🔵 إضافة Log
 router.post("/add", (req, res) => {
     const { user_id, action, module, importance } = req.body;
 
@@ -18,7 +17,6 @@ router.post("/add", (req, res) => {
     });
 });
 
-// 🔵 جلب كل الـ Logs
 router.get("/all", (req, res) => {
     const sql = "SELECT * FROM activity_log ORDER BY created_at DESC";
 
@@ -28,7 +26,6 @@ router.get("/all", (req, res) => {
     });
 });
 
-// 🔵 جلب logs حسب الموديول
 router.get("/module/:name", (req, res) => {
     const sql = "SELECT * FROM activity_log WHERE module = ? ORDER BY created_at DESC";
 
@@ -38,7 +35,6 @@ router.get("/module/:name", (req, res) => {
     });
 });
 
-// 🔵 جلب logs حسب المستخدم
 router.get("/user/:id", (req, res) => {
     const sql = "SELECT * FROM activity_log WHERE user_id = ? ORDER BY created_at DESC";
 

@@ -9,7 +9,7 @@ import uiLogRoute from "./routes/uiLog.js";
 import db from "./config/db.js";
 import activityRoutes from "./routes/activity.js";
 import testRoutes from "./routes/test.js";
-import authRoutes from "./routes/auth.js";   // ← 1) IMPORT HERE
+import authRoutes from "./routes/auth.js";
 
 const app = express();
 app.use(cors());

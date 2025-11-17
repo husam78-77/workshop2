@@ -9,7 +9,6 @@ function initSidebar() {
     const profileArea = document.querySelector(".sidebar-profile");
     const toggleBtn = document.getElementById("sidebarToggle");
 
-    // If elements don't exist yet, try again in 100ms
     if (!sidebar || !menu || !profileArea || !toggleBtn) {
         setTimeout(initSidebar, 100);
         return;
