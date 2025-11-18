@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-hover" data-menu-position="fixed"
+    data-theme-mode="light">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Dayone - Bootstrap 5 Premium Admin & Dashboard Template </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.css" rel="stylesheet">
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet">
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- SwiperJS Css -->
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- quill Css -->
+    <link rel="stylesheet" href="../assets/libs/quill/quill.snow.css">
+    <link rel="stylesheet" href="../assets/libs/quill/quill.bubble.css">
+
+
+    <script>
+        if (localStorage.Dayonelandingdarktheme) {
+            document.querySelector("html").setAttribute("data-theme-mode", "dark")
+        }
+        if (localStorage.Dayonelandingrtl) {
+            document.querySelector("html").setAttribute("dir", "rtl")
+            document.querySelector("#style")?.setAttribute("href", "../assets/libs/bootstrap/css/bootstrap.rtl.min.css");
+        }
+    </script>
+
+
+</head>
+
+<body class="landing-body">
+
+    <!-- Start Switcher -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="">
+                <p class="switcher-style-head">Theme Color Mode:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-light-theme">
+                                Light
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-dark-theme">
+                                Dark
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <p class="switcher-style-head">Directions:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-ltr">
+                                LTR
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-rtl">
+                                RTL
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-colors">
+                <p class="switcher-style-head">Theme Primary:</p>
+                <div class="d-flex align-items-center switcher-style">
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-1" type="radio" name="theme-primary"
+                            id="switcher-primary">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-2" type="radio" name="theme-primary"
+                            id="switcher-primary1">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                            id="switcher-primary2">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                            id="switcher-primary3">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                            id="switcher-primary4">
+                    </div>
+                    <div class="form-check switch-select me-3 ps-0 mt-1 color-primary-light">
+                        <div class="theme-container-primary"></div>
+                        <div class="pickr-container-primary"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="switcher-style-head">reset:</p>
+                <div class="text-center">
+                    <button id="reset-all" class="btn btn-danger mt-3">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Switcher -->
+
+    <div class="landing-page-wrapper">
+
+        <!-- app-header -->
+        <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="index.html" class="header-logo">
+                                <img src="../assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+                                <img src="../assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="sidemenu-toggle header-link" data-bs-toggle="sidebar">
+                            <span class="open-toggle">
+                                <i class="ri-menu-3-line fs-20"></i>
+                            </span>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element align-items-center">
+                        <!-- Start::header-link|switcher-icon -->
+                        <div class="btn-list d-lg-none d-block">
+                            <span class="menu-btn">
+                                <a class="btn btn-success" href="javascript:void(0);"><i
+                                        class="fe fe-paper-plane-o "></i> Submit Request</a>
+                            </span>
+                            <button class="btn btn-icon btn-primary switcher-icon" data-bs-toggle="offcanvas"
+                                data-bs-target="#switcher-canvas">
+                                <i class="fe fe-settings header-link-icon"></i>
+                            </button>
+                        </div>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <div class="">
+                <!-- Start::main-sidebar -->
+                <div class="main-sidebar">
+
+                    <!-- Start::nav -->
+                    <nav class="main-menu-container nav nav-pills sub-open">
+                        <div class="landing-logo-container">
+                            <div class="horizontal-logo">
+                                <a href="index.html" class="header-logo">
+                                    <img src="../assets/images/brand-logos/desktop-logo.png" alt="logo"
+                                        class="desktop-logo">
+                                    <img src="../assets/images/brand-logos/desktop-white.png" alt="logo"
+                                        class="desktop-white">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide-left" id="slide-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                            </svg>
+                        </div>
+                        <ul class="main-menu">
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a class="side-menu__item" href="support-landing.html">
+                                    <span class="side-menu__label">Home</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide has-sub">
+                                <a href="javascript:void(0);" class="side-menu__item">
+                                    <span class="side-menu__label me-2">Knowledge</span>
+                                    <i class="fe fe-chevron-right side-menu__angle op-8"></i>
+                                </a>
+                                <ul class="slide-menu child1">
+                                    <li class="slide">
+                                        <a href="support-knowledge.html" class="side-menu__item">Knowledge</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="support-knowledgeview.html" class="side-menu__item">KnowledgeView</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="support-openticket.html" class="side-menu__item">
+                                    <span class="side-menu__label">Open Ticket</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="support-contact.html" class="side-menu__item">
+                                    <span class="side-menu__label">Contact</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+
+                            <!-- Start::slide -->
+                            <li class="slide has-sub">
+                                <a href="javascript:void(0);" class="side-menu__item">
+                                    <span class="side-menu__label me-2">Pages</span>
+                                    <i class="fe fe-chevron-right side-menu__angle"></i>
+                                </a>
+                                <ul class="slide-menu child1 mega-menu mega-menu1">
+                                    <div class="row">
+                                        <div class="col">
+                                            <li>
+                                                <h6 class="mega-subtitle pt-2">User Pages</h6>
+                                            </li>
+                                            <li class="slide side-menu__label1">
+                                                <a href="javascript:void(0)"> Pages</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-userdash.html" class="side-menu__item">Dashboard</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-editprofile.html" class="side-menu__item">Edit
+                                                    Profile</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-ticketlist.html" class="side-menu__item">Ticket
+                                                    Lists</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-ticketactive.html" class="side-menu__item">Active
+                                                    Tickets</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-ticketclosed.html" class="side-menu__item">Closed
+                                                    Tickets</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-ticketview.html" class="side-menu__item">View
+                                                    Ticket</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-ticketcreate.html" class="side-menu__item">Create
+                                                    Ticket</a>
+                                            </li>
+                                        </div>
+                                        <div class="col">
+                                            <li>
+                                                <h6 class="mega-subtitle pt-2">Admin Pages</h6>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-admindash.html" class="side-menu__item">Dashboard</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-admineditprofile.html" class="side-menu__item">Edit
+                                                    Profile</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-adminticketlist.html" class="side-menu__item">Ticket
+                                                    Lists</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-adminticketactive.html" class="side-menu__item">Active
+                                                    Tickets</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-adminticketclosed.html" class="side-menu__item">Closed
+                                                    Tickets</a>
+                                            </li>
+                                            <li class="slide active">
+                                                <a href="support-adminticketview.html" class="side-menu__item">View
+                                                    Ticket</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-adminticketnew.html" class="side-menu__item">New
+                                                    Ticket</a>
+                                            </li>
+                                        </div>
+                                        <div class="col">
+                                            <li>
+                                                <h6 class="mega-subtitle pt-2 without-title"></h6>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-admincustomer.html"
+                                                    class="side-menu__item">Customers</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-admincustomerview.html"
+                                                    class="side-menu__item">CustomersView</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-admincategories.html"
+                                                    class="side-menu__item">Categories</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a href="support-adminarticles.html"
+                                                    class="side-menu__item">Articles</a>
+                                            </li>
+                                        </div>
+                                        <div class="col">
+                                            <li>
+                                                <h6 class="mega-subtitle pt-2">Agent Pages</h6>
+                                            </li>
+                                            <li class="slide"><a href="support-agentdash.html"
+                                                    class="side-menu__item">Dashboard</a></li>
+                                            <li class="slide"><a href="support-agenteditprofile.html"
+                                                    class="side-menu__item">Edit Profile</a></li>
+                                            <li class="slide"><a href="support-agentticketlist.html"
+                                                    class="side-menu__item">Ticket List</a></li>
+                                            <li class="slide"><a href="support-agentticketactive.html"
+                                                    class="side-menu__item">Active Tickets</a></li>
+                                            <li class="slide"><a href="support-agentticketclosed.html"
+                                                    class="side-menu__item">Closed Tickets</a></li>
+                                            <li class="slide"><a href="support-agentticketview.html"
+                                                    class="side-menu__item">View Ticket</a></li>
+                                            <li class="slide"><a href="support-agentassign.html"
+                                                    class="side-menu__item">Assigned Categories</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li>
+                                                <h6 class="mega-subtitle pt-2">Other Pages</h6>
+                                            </li>
+                                            <li class="slide"><a href="javascript:void(0);" class="side-menu__item"
+                                                    data-bs-toggle="modal" data-bs-target="#loginmodal">Login</a></li>
+                                            <li class="slide"><a href="javascript:void(0);" class="side-menu__item"
+                                                    data-bs-toggle="modal" data-bs-target="#registermodal">Register</a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide has-sub">
+                                <a href="javascript:void(0);" class="side-menu__item">
+                                    <span class="side-menu__label me-2">My Dashboard </span>
+                                    <i class="fe fe-chevron-right side-menu__angle op-8"></i>
+                                </a>
+                                <ul class="slide-menu child1">
+                                    <li class="slide">
+                                        <a href="support-landing.html" class="side-menu__item">My Dashboard</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="support-admineditprofile.html" class="side-menu__item">Edit Profile</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="support-adminticketlist.html" class="side-menu__item">My Tickets</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="login-1.html" class="side-menu__item">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- End::slide -->
+                            <li class="main-menu-btns ms-2">
+                                <span class="menu-btn">
+                                    <a class="btn btn-success" href="javascript:void(0);"><i class="fe fe-send "></i>
+                                        Submit Request</a>
+                                </span>
+                                <button class="btn btn-wave btn-icon btn-primary switcher-icon"
+                                    data-bs-toggle="offcanvas" data-bs-target="#switcher-canvas">
+                                    <i class="fe fe-settings header-link-icon"></i>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="slide-right" id="slide-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z">
+                                </path>
+                            </svg>
+                        </div>
+                    </nav>
+                    <!-- End::nav -->
+
+                </div>
+                <!-- End::main-sidebar -->
+            </div>
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content landing-main px-0">
+
+            <!-- Start:: Section-1 -->
+            <div class="landing-banner landing-banner2" id="home">
+                <section class="section">
+                    <div class="main-banner-container pb-lg-0 px-sm-0">
+                        <div class="row text-fixed-white d-flex align-items-center">
+                            <div class="col">
+                                <h2 class="mb-0 text-fixed-white">Assigned Categories</h2>
+                            </div>
+                            <div class="col col-auto">
+                                <ol class="breadcrumb text-center mb-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6">Pages</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">
+                                        <a href="javascript:void(0);" class="text-fixed-white fw-semibold">Assigned
+                                            Categories</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End:: Section-1 -->
+
+            <!--Div-->
+            <div>
+                <div class="cover-image sptb section-bg">
+                    <div class="main-container">
+                        <div class="row">
+                            <div class="col-xl-3 mb-4 mb-xl-0">
+                                <div class="position-sticky top-0">
+                                    <div class="card custom-card border-0 overflow-hidden">
+                                        <div class="card-body p-0">
+                                            <!-- Start::app-sidebar -->
+                                            <aside class="support-sidebar">
+                                                <div class="profile-pic">
+                                                    <div class="profile-pic-img">
+                                                        <span class="bg-success dots" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title=""
+                                                            data-original-title="online"
+                                                            data-bs-original-title=""></span>
+                                                        <div class="avatar avatar-xxl avatar-rounded">
+                                                            <img src="../assets/images/users/16.jpg" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <a href="javascript:void(0);" class="text-dark">
+                                                        <h5 class="mt-3 mb-1 fw-semibold2">Abigali kelly</h5>
+                                                    </a>
+                                                    <small class="text-muted ">App Developer</small>
+                                                </div>
+
+                                                <!-- Start::main-sidebar -->
+                                                <div class="main-support-sidebar">
+
+
+                                                    <!-- Start::nav -->
+                                                    <nav
+                                                        class="main-client-menu-container nav nav-pills flex-column sub-open">
+                                                        <ul class="main-client-menu">
+                                                            <!-- Start::slide -->
+                                                            <li class="slide">
+                                                                <a href="support-agentdash.html"
+                                                                    class="side-menu__item"><i
+                                                                        class="side-menu__icon las la-home"></i>Dashboard</a>
+                                                            </li>
+                                                            <li class="slide">
+                                                                <a href="support-agenteditprofile.html"
+                                                                    class="side-menu__item"><i
+                                                                        class="side-menu__icon las la-edit"></i>Edit
+                                                                    Profile</a>
+                                                            </li>
+                                                            <li class="slide">
+                                                                <a href="support-agentticketlist.html"
+                                                                    class="side-menu__item"><i
+                                                                        class="side-menu__icon las la-ticket-alt"></i>Ticket
+                                                                    Lists</a>
+                                                            </li>
+                                                            <li class="slide">
+                                                                <a href="support-agentticketactive.html"
+                                                                    class="side-menu__item"><i
+                                                                        class="side-menu__icon las la-compass"></i>Active
+                                                                    Tickets</a>
+                                                            </li>
+                                                            <li class="slide">
+                                                                <a href="support-agentticketclosed.html"
+                                                                    class="side-menu__item"><i
+                                                                        class="side-menu__icon las la-edit"></i>Closed
+                                                                    Tickets</a>
+                                                            </li>
+                                                            <li class="slide">
+                                                                <a href="support-agentticketview.html"
+                                                                    class="side-menu__item"><i
+                                                                        class="side-menu__icon las la-tags"></i>View
+                                                                    Ticket</a>
+                                                            </li>
+                                                            <li class="slide">
+                                                                <a href="support-agentassign.html"
+                                                                    class="side-menu__item"><i
+                                                                        class="side-menu__icon las la-file-alt"></i>Assigned
+                                                                    Categories</a>
+                                                            </li>
+                                                            <li class="slide has-sub">
+                                                                <a href="javascript:void(0);" class="side-menu__item">
+                                                                    <span class="side-menu__label"><i
+                                                                            class="side-menu__icon lab la-buffer"></i>Level
+                                                                        1</span>
+                                                                    <i class="fe fe-chevron-right side-menu__angle"></i>
+                                                                </a>
+                                                                <ul class="slide-menu child1">
+                                                                    <li class="slide">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="side-menu__item">Level 1.1</a>
+                                                                    </li>
+                                                                    <li class="slide">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="side-menu__item">Level 1.2</a>
+                                                                    </li>
+                                                                    <li class="slide">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="side-menu__item">Level 1.3</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <!-- End::slide -->
+                                                        </ul>
+                                                    </nav>
+                                                    <!-- End::nav -->
+
+                                                </div>
+                                                <!-- End::main-sidebar -->
+
+                                            </aside>
+                                            <!-- End::app-sidebar -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-9">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="card custom-card">
+                                            <div class="card-header justify-content-between">
+                                                <h4 class="card-title">Assigned Categories List</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row mb-3">
+                                                    <div class="col-lg-6">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Show</span>
+                                                            <div class="d-flex ms-2 mx-2">
+                                                                <div class="form-group mt-2">
+                                                                    <select name="quantity" id="select-countries17"
+                                                                        class="form-control  wd-150" data-trigger>
+                                                                        <option value="1" selected="">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <span>entries</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="float-end">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="search">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table
+                                                        class="table table-vcenter text-nowrap table-hover border table-striped"
+                                                        id="support-categorylist">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="w-5">#No</th>
+                                                                <th class="">Name</th>
+                                                                <th class="text-center">Ticket
+                                                                    Inprogress</th>
+                                                                <th class="text-center">Ticket Resolved
+                                                                </th>
+                                                                <th class="w-5 text-center">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>#01</td>
+                                                                <td><span>Services</span></td>
+                                                                <td class="text-center"><span>02</span></td>
+                                                                <td class="text-center"><span>01</span></td>
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1">
+                                                                            <i class="fe fe-eye text-primary"
+                                                                                data-bs-toggle="tooltip"
+                                                                                data-bs-placement="top"
+                                                                                title="Edit"></i>
+                                                                        </a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Delete"><i
+                                                                                class="fe fe-trash-2 text-danger"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#02</td>
+                                                                <td><span>Support</span></td>
+                                                                <td class="text-center"><span>18</span></td>
+                                                                <td class="text-center"><span>05</span></td>
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1">
+                                                                            <i class="fe fe-eye text-primary"
+                                                                                data-bs-toggle="tooltip"
+                                                                                data-bs-placement="top"
+                                                                                title="Eidt"></i>
+                                                                        </a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Delete"><i
+                                                                                class="fe fe-trash-2 text-danger"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#03</td>
+                                                                <td><span>License</span></td>
+                                                                <td class="text-center"><span>03</span></td>
+                                                                <td class="text-center"><span>01</span></td>
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1">
+                                                                            <i class="fe fe-eye text-primary"
+                                                                                data-bs-toggle="tooltip"
+                                                                                data-bs-placement="top"
+                                                                                title="Eidt"></i>
+                                                                        </a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Delete"><i
+                                                                                class="fe fe-trash-2 text-danger"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#04</td>
+                                                                <td><span>Billing</span></td>
+                                                                <td class="text-center"><span>03</span></td>
+                                                                <td class="text-center"><span>01</span></td>
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1">
+                                                                            <i class="fe fe-eye text-primary"
+                                                                                data-bs-toggle="tooltip"
+                                                                                data-bs-placement="top"
+                                                                                title="Eidt"></i>
+                                                                        </a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Delete"><i
+                                                                                class="fe fe-trash-2 text-danger"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#05</td>
+                                                                <td><span>Settings</span></td>
+                                                                <td class="text-center"><span>06</span></td>
+                                                                <td class="text-center"><span>02</span></td>
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1">
+                                                                            <i class="fe fe-eye text-primary"
+                                                                                data-bs-toggle="tooltip"
+                                                                                data-bs-placement="top"
+                                                                                title="Eidt"></i>
+                                                                        </a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Delete"><i
+                                                                                class="fe fe-trash-2 text-danger"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#06</td>
+                                                                <td><span>Customization</span></td>
+                                                                <td class="text-center"><span>02</span></td>
+                                                                <td class="text-center"><span>02</span></td>
+                                                                <td>
+                                                                    <div class="d-flex">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1">
+                                                                            <i class="fe fe-eye text-primary"
+                                                                                data-bs-toggle="tooltip"
+                                                                                data-bs-placement="top"
+                                                                                title="Eidt"></i>
+                                                                        </a>
+                                                                        <a href="javascript:void(0);"
+                                                                            class="action-btns1"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Delete"><i
+                                                                                class="fe fe-trash-2 text-danger"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Div-->
+
+            <!-- Start:: Section-2 -->
+            <section class="sptb bg-white">
+                <div class="main-container">
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-6 col-md-12">
+                            <div class="sub-newsletter">
+                                <h3 class="mb-2 "><i class="fe fe-send me-2"></i> Subscribe To Our Onlinesletter</h3>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-6 col-md-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Ask Here" aria-label="Ask Here"
+                                    aria-describedby="button-addon12">
+                                <button class="btn btn-primary btn-lg btn-wave waves-effect waves-light" type="button"
+                                    id="button-addon12">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-2 -->
+
+            <!-- Start:: Section-3 -->
+            <section class="section landing-footer text-fixed-white">
+                <div class="main-container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-6 col-12">
+                            <div class="">
+                                <h4 class="fw-semibold mb-3 text-fixed-white">Our Services</h4>
+                                <ul class="list-unstyled op-6 fw-normal landing-footer-list">
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Our Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Email</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-12">
+                            <div class="">
+                                <h4 class="fw-semibold mb-3 text-fixed-white">Support</h4>
+                                <ul class="list-unstyled op-6 fw-normal landing-footer-list">
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Terms of Service</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Help</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="">
+                                <h4 class="fw-semibold text-fixed-white">Get In Touch</h4>
+                                <ul class="list-unstyled op-6 fw-normal landing-footer-list">
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white"><i
+                                                class="fe fe-home me-3"></i> New York, NY 10012, US-52014</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white"><i
+                                                class="fe fe-mail me-3 fs-12"></i> info12323@example.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white"><i
+                                                class="fe fe-phone me-3"></i> + 01 234 567 88, + 01 234 567 88</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white"><i
+                                                class="fe fe-printer me-3"></i> + 01 234 567 89, + 01 234 567 89</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="">
+                                <h4 class="fw-semibold text-fixed-white">Subscribe</h4>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Ask Here" aria-label="Ask Here"
+                                        aria-describedby="button-addon2">
+                                    <button class="btn btn-primary btn-wave waves-effect waves-light" type="button"
+                                        id="button-addon2">Subscribe</button>
+                                </div>
+                                <h4 class="fw-semibold text-fixed-white mt-3">Social Icons</h4>
+                                <ul class="list-unstyled fw-normal landing-footer-list">
+                                    <li class="mt-3">
+                                        <div class="mb-0">
+                                            <div class="btn-list">
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-primary-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-facebook-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-secondary-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-twitter-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-warning-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-instagram-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-success-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-github-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-danger-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-youtube-line fw-bold"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-3 -->
+
+            <div class="text-center landing-main-footer py-3">
+                <span class="text-muted fs-15"> Copyright © <span id="year"></span> <a href="javascript:void(0);"
+                        class="text-primary fw-semibold"><u>Dayone</u></a>.
+                    Designed with <span class="fe fe-heart text-danger"></span> by <a href="javascript:void(0);"
+                        class="text-primary fw-semibold"><u>
+                            Spruko</u>
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+
+        </div>
+        <!-- End::app-content -->
+
+    </div>
+
+
+    <!--Login Modal-->
+    <div class="modal fade" id="loginmodal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="single-page customerpage">
+                        <div class="wrapper wrapper2 box-shadow-0 border-0">
+                            <div class="p-4">
+                                <div class="btn-list d-flex">
+                                    <a class="btn btn-google flex-grow-1 btn-w-xl"
+                                        href="https://www.google.com/gmail/"><i class="bx bxl-google fa-1x me-2"></i>
+                                        Google</a>
+                                    <a class="btn btn-twitter" href="https://twitter.com/"><i
+                                            class="bx bxl-twitter fa-1x"></i></a>
+                                    <a class="btn btn-facebook" href="https://www.facebook.com/"><i
+                                            class="bx bxl-facebook fa-1x"></i></a>
+                                </div>
+                            </div>
+                            <hr class="divider overflow-visible mt-3">
+                            <form class="p-4 pt-1" id="login" name="login">
+                                <div class="form-group">
+                                    <label class="form-label">Mail or Username</label>
+                                    <input class="form-control" placeholder="Email" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Password</label>
+                                    <input class="form-control" placeholder="password" type="password">
+                                </div>
+                                <div class="submit mt-3">
+                                    <a class="btn btn-primary d-grid" href="index.html">Login</a>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <p class="mb-2"><a href="javascript:void(0);">Forgot Password</a></p>
+                                    <p class="text-dark mb-0">Don't have account?<a class="text-primary ms-1"
+                                            href="javascript:void(0);" data-bs-toggle="modal"
+                                            data-bs-target="#registermodal" data-bs-dismiss="modal">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal  -->
+
+    <!--Register Modal-->
+    <div class="modal fade" id="registermodal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="single-page customerpage">
+                        <div class="wrapper wrapper2 box-shadow-0 border-0">
+                            <div class="p-4">
+                                <div class="btn-list d-flex">
+                                    <a class="btn btn-google btn-block btn-w-xl flex-grow-1" href="https://www.google.com/gmail/"><i
+                                            class="bx bxl-google fa-1x me-2"></i> Google</a>
+                                    <a class="btn btn-twitter" href="https://twitter.com/"><i
+                                            class="bx bxl-twitter fa-1x"></i></a>
+                                    <a class="btn btn-facebook" href="https://www.facebook.com/"><i
+                                            class="bx bxl-facebook fa-1x"></i></a>
+                                </div>
+                            </div>
+                            <hr class="divider overflow-visible mt-3">
+                            <form class="p-4 pt-1" id="register" name="register">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">First Name</label>
+                                            <input class="form-control" placeholder="First Name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Last Name</label>
+                                            <input class="form-control" placeholder="Last Name" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Mail or Username</label>
+                                    <input class="form-control" placeholder="Email" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Password</label>
+                                    <input class="form-control" placeholder="password" type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Captcha</label>
+                                    <input class="form-control" placeholder="captch" type="text">
+                                    <div class="captch-body mt-2">
+                                        <img src="../assets/images/media/png/13.png" alt="img">
+                                    </div>
+                                </div>
+                                <div class="submit">
+                                    <a class="btn btn-primary d-grid" href="index.html">Submit</a>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <p class="text-dark mb-0">Already have an account?<a class="text-primary ms-1"
+                                            href="javascript:void(0);" data-bs-toggle="modal"
+                                            data-bs-target="#loginmodal" data-bs-dismiss="modal">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Register Modal  -->
+
+
+    <div class="scrollToTop">
+        <span class="arrow"><i class="fe fe-chevrons-up"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- Popper JS -->
+    <script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../assets/js/defaultmenu.min.js"></script>
+
+    <!-- Date & Time Picker JS -->
+    <script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+
+    <!-- Default date picker js-->
+    <script src="../assets/js/default-flat-datepicker.js"></script>
+
+    <!-- Internal Landing JS -->
+    <script src="../assets/js/landing.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="../assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../assets/js/sticky.js"></script>
+
+</body>
+
+</html>

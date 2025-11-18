@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="dark" data-toggled="close">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inspection Report System</title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="html template, dashboard template, admin template, dashboard, admin, html css templates, bootstrap template, hr dashboard, dashboard html css, employee dashboard, admin dashboard bootstrap, admin panel bootstrap, bootstrap admin, dashboard css, project dashboard">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link id="style" href="../dist/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Dayone CSS -->
+    <link href="../dist/assets/css/styles.min.css" rel="stylesheet">
+    <link href="../dist/assets/css/icons.css" rel="stylesheet">
+
+    <!-- Optional Plugin CSS -->
+    <link href="../dist/assets/libs/node-waves/waves.min.css" rel="stylesheet">
+    <link href="../dist/assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../dist/assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+</head>
+
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="../dist/assets/images/media/loader.svg" alt="">
+    </div>
+    <!-- Loader -->
+
+    <div class="page">
+        <!-- app-header -->
+        <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="index.html" class="header-logo">
+                                <img src="../dist/assets/images/brand-logos/desktop-logo.png" alt="logo"
+                                    class="desktop-logo">
+                                <img src="../dist/assets/images/brand-logos/toggle-logo.png" alt="logo"
+                                    class="toggle-logo">
+                                <img src="../dist/assets/images/brand-logos/desktop-dark.png" alt="logo"
+                                    class="desktop-dark">
+                                <img src="../dist/assets/images/brand-logos/toggle-dark.png" alt="logo"
+                                    class="toggle-dark">
+                                <img src="../dist/assets/images/brand-logos/desktop-white.png" alt="logo"
+                                    class="desktop-white">
+                                <img src="../dist/assets/images/brand-logos/toggle-white.png" alt="logo"
+                                    class="toggle-white">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a aria-label="Hide Sidebar"
+                            class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
+                            data-bs-toggle="sidebar" href="javascript:void(0);">
+                            <span>
+
+                            </span>
+                        </a>
+                        <!-- End::header-link -->
+                        <!-- Start::header-search -->
+                        <div class="mt-0">
+                            <form class="form-inline d-none d-lg-block">
+                                <div class="search-element">
+                                    <input type="search" class="form-control header-search" placeholder="Search…"
+                                        aria-label="Search" tabindex="1">
+                                    <button class="btn">
+                                        <i class="fe fe-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- End::header-search -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-search d-lg-none">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="header-link-icon" height="24px"
+                                viewBox="0 0 24 24" width="24px" fill="#000000">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                            </svg>
+                        </a>
+
+                        <ul class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <li>
+                                <span class="dropdown-item d-flex align-items-center">
+                                    <span class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search..."
+                                            aria-label="Search input" aria-describedby="button-addon2">
+                                        <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-theme-mode">
+                        <!-- Start::header-link|layout-setting -->
+                        <a href="javascript:void(0);" class="header-link layout-setting">
+                            <span class="light-layout lh-1">
+                                <!-- Start::header-link-icon -->
+                                <i class="fe fe-moon header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                            <span class="dark-layout lh-1">
+                                <!-- Start::header-link-icon -->
+                                <i class="fe fe-sun header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                        </a>
+                        <!-- End::header-link|layout-setting -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element country-selector">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown">
+                            <img src="../dist/assets/images/flags/6.jpg" alt="img" class="rounded-circle">
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/5.jpg" alt="img">
+                                    </span>
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/4.jpg" alt="img">
+                                    </span>
+                                    Spanish
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/6.jpg" alt="img">
+                                    </span>
+                                    French
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/1.jpg" alt="img">
+                                    </span>
+                                    German
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/2.jpg" alt="img">
+                                    </span>
+                                    Italian
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/3.jpg" alt="img">
+                                    </span>
+                                    Russian
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element cart-dropdown">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown">
+                            <i class="fe fe-mail header-link-icon"></i>
+                            <span class="badge bg-success rounded-pill header-icon-badge" id="cart-icon-badge">5</span>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-medium">You have messages</p>
+                                    <span class="badge bg-success-transparent" id="cart-data">5 Items</span>
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="dropdown-divider">
+                            </div>
+                            <ul class="list-unstyled mb-0" id="header-cart-items-scroll">
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/1.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Jack Wright</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>All the best your template awesome</li>
+                                                    <li class="text-muted">3 hours ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/3.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Lisa Rutherford</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Hey! there I'm available</li>
+                                                    <li class="text-muted">5 hour ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/5.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Blake Walker</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Just created a new blog post</li>
+                                                    <li class="text-muted">45 mintues ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/4.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Fiona Morrison</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Added new comment on your photo</li>
+                                                    <li class="text-muted">2 days ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/6.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Stewart Bond</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Your payment invoice is generated</li>
+                                                    <li class="text-muted">3 days ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="p-3 empty-header-item border-top">
+                                <div class="d-grid">
+                                    <a href="chat.html" class="btn btn-primary">See All Messages</a>
+                                </div>
+                            </div>
+                            <div class="p-5 empty-item d-none">
+                                <div class="text-center">
+                                    <span class="avatar avatar-xl avatar-rounded bg-warning-transparent">
+                                        <i class="ri-chat-2-line fs-2"></i>
+                                    </span>
+                                    <h6 class="fw-bold mb-1 mt-3">Your Inbox is Empty</h6>
+                                    <span class="mb-3 fw-normal fs-13 d-block">See more messages in chat page :)</span>
+                                    <a href="Chat.html" class="btn btn-primary btn-wave btn-sm m-1"
+                                        data-abc="true">continue Viewing <i class="bi bi-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-shortcuts-dropdown d-none d-lg-flex">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" id="notificationDropdown" aria-expanded="false">
+                            <i class="fe fe-grid header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown header-shortcuts-dropdown dropdown-menu pb-0 dropdown-menu-end"
+                            aria-labelledby="notificationDropdown">
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-medium">Related Apps</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider mb-0"></div>
+                            <div class="main-header-shortcuts p-3" id="header-shortcut-scroll">
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <a href="full-calendar.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar fs-23 bg-success-transparent p-2 mb-2">
+                                                    <i class='bx bx-calendar text-success'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Calendar</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="email-inbox.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar  fs-23 bg-info-transparent p-2 mb-2">
+                                                    <i class='bx bx-envelope  text-info'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Mail</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="profile-1.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar bg-warning-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-user  text-warning'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Profile</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="chat.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar    bg-pink-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-chat text-pink'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Chat</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="contact-list.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar    bg-secondary-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-phone text-secondary'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Contacts</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="settings.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar    bg-teal-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-cog text-teal'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Settings</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-fullscreen">
+                        <!-- Start::header-link -->
+                        <a onclick="openFullscreen();" href="javascript:void(0);" class="header-link">
+                            <i class="fe fe-maximize full-screen-open header-link-icon"></i>
+                            <i class="fe fe-minimize full-screen-close header-link-icon d-none"></i>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element notifications-dropdown">
+                        <!-- Start::header-link|notification-rights -->
+                        <a href="javascript:void(0);" class="header-link" data-bs-toggle="offcanvas"
+                            data-bs-target="#notification-sidebar-canvas" id="messageDropdown">
+                            <i class="fe fe-bell header-link-icon"></i>
+                            <span class="bg-dot"></span>
+                        </a>
+                        <!-- End::header-link|notification-rights -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element main-header-profile">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle mx-0 w-100"
+                            id="mainHeaderProfile" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            aria-expanded="false">
+                            <div>
+                                <img src="../dist/assets/images/users/16.jpg" alt="img"
+                                    class="rounded-3 avatar avatar-md">
+                            </div>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu pt-0 header-profile-dropdown dropdown-menu-end"
+                            aria-labelledby="mainHeaderProfile">
+                            <Li>
+                                <div class="p-3 text-center border-bottom">
+                                    <a href="profile-1.html" class="text-center fw-semibold">John Thomson</a>
+                                    <p class="text-center user-semi-title fs-13 mb-0">App Developer</p>
+                                </div>
+                            </Li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="profile-1.html"><i
+                                        class="fe fe-user me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="email-inbox.html"><i
+                                        class="fe fe-mail me-2"></i>Inbox <span
+                                        class="badge bg-success-transparent ms-auto">25</span></a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="editprofile.html"><i
+                                        class="fe fe-settings me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"
+                                    data-bs-toggle="modal" data-bs-target="#changepasswordnmodal"><i
+                                        class="fe fe-edit-3 me-2"></i>Change Password</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="chat.html"><i
+                                        class="fe fe-headphones me-2"></i>Support</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="login-1.html"><i
+                                        class="fe fe-power me-2"></i>Log Out</a></li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link|switcher-icon -->
+                        <a href="javascript:void(0);" class="header-link switcher-icon" data-bs-toggle="offcanvas"
+                            data-bs-target="#switcher-canvas">
+                            <i class="fe fe-settings header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+
+
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <!-- Start::main-sidebar-header -->
+            <div class="main-sidebar-header">
+                <a href="index.html" class="header-logo">
+                    <img src="../dist/assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+                    <img src="../dist/assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+                    <img src="../dist/assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+                    <img src="../dist/assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+                    <img src="../dist/assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
+                    <img src="../dist/assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white">
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+
+            <!-- Start::main-sidebar -->
+            <div class="main-sidebar" id="sidebar-scroll">
+
+                <!-- Start::nav -->
+                <nav class="main-menu-container nav nav-pills flex-column sub-open">
+                    <!-- Start::Sidebar User -->
+                    <div class="app-sidebar__user mb-3">
+                        <div class="dropdown user-pro-body text-center user-pic">
+                            <span class="avatar avatar-xxl online avatar-rounded">
+                                <img src="../dist/assets/images/users/16.jpg" alt="img">
+                            </span>
+                            <div class="user-info mt-1">
+                                <h5 class=" mb-1">Faheem Ahmad</h5>
+                                <span class="text-muted app-sidebar__user-name text-sm">Inspector</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End::Sidebar User -->
+                    <div class="slide-left" id="slide-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                        </svg>
+                    </div>
+                    <ul class="main-menu">
+
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="fe fe-home side-menu__icon"></i>
+                                <span class="side-menu__label">Dashboards</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Dashboards</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+
+                    </ul>
+
+                </nav>
+                <!-- End::nav -->
+
+            </div>
+            <!-- End::main-sidebar -->
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Page Header -->
+                <div class="page-header d-lg-flex d-block">
+                    <div class="page-leftheader">
+                        <div class="page-title">Inspection Report</div>
+                    </div>
+                </div>
+                <!-- Page Header Close -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title">
+                                    PHOTOS REPORT
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary mb-3" id="addRowBtn">Add Row</button>
+
+                                <!-- Table -->
+                                <table class="table table-bordered" id="table-pembajaan-add">
+                                    <thead>
+                                        <tr>
+                                            <td><b>Attachment</b></td>
+                                            <td><b>Finding</b></td>
+                                            <td><b>Recommendation</b></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input type="file" class="form-control fileInputRow" multiple>
+                                                    <div class="w-100 mt-2 d-flex flex-wrap gap-2 previewContainerRow">
+                                                    </div>
+                                                    <button type="button" class="btn btn-danger mt-2 clearBtnRow">Clear
+                                                        Images</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <textarea class="form-control"
+                                                        placeholder="Fill findings here"></textarea>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <textarea class="form-control"
+                                                        placeholder="Fill recommendations here"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br>
+                                <div class="d-flex justify-content-end" style="gap: 0.5rem">
+                                    <a href="create1.html" class="btn btn-warning">Back</a>
+                                    <button type="button" class="btn btn-success" id="saveBtn">Save</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Image</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body position-relative text-center">
+                                <canvas id="editCanvas" style="border:1px solid #ccc; cursor: crosshair;"></canvas>
+                                <div id="textHelper"
+                                    style="position:absolute; display:none; background:#333; color:#fff; padding:3px 8px; border-radius:5px; font-size:12px; pointer-events:none;">
+                                    Click on area to tag
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="addTextBtn">Add Text</button>
+                                <button type="button" class="btn btn-secondary" id="drawRectBtn">Draw Rectangle</button>
+                                <button type="button" class="btn btn-warning" id="undoBtn">Undo</button>
+                                <button type="button" class="btn btn-success" id="saveImageBtn">Save Changes</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--End::row-1 -->
+
+        </div>
+    </div>
+    <!-- End::app-content -->
+
+    <!-- Start Right-Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="notification-sidebar-canvas"
+        aria-labelledby="offcanvasRightLabel1">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title text-default fs-17 fw-medium" id="offcanvasRightLabel1">Notifications <span
+                    class="badge bg-danger-transparent" id="notifiation-data">11 Unread</span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0 sidebar-right">
+            <div id="header-notification-scroll">
+                <div class="list-group-item  align-items-center border-start-0 border-end-0 border-top-0">
+                    <div class="d-flex">
+                        <span class="avatar avatar-lg me-3 avatar-rounded">
+                            <img src="../dist/assets/images/users/4.jpg" alt="img">
+                        </span>
+                        <div class="w-65">
+                            <a href="javascript:void(0);" class="fw-medium fs-16">Liam <span
+                                    class="text-muted fw-normal">Sent Message</span></a>
+                            <span class="clearfix"></span>
+                            <span class="text-muted fs-13 ms-auto d-inline-block"><i
+                                    class="mdi mdi-clock text-muted me-1"></i>30 mins ago</span>
+                        </div>
+                        <div class="ms-auto">
+                            <div class="text-end">
+                                <a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="fe fe-more-horizontal p-1 text-muted"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="javascript:void(0);"><i
+                                                class="fe fe-eye me-2"></i>View</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);"><i
+                                                class="fe fe-plus-circle me-2"></i>Add</a></li>
+                                    <!-- <li><a class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>Remove</a></li> -->
+                                    <li><a class="dropdown-item" href="javascript:void(0);"><i
+                                                class="fe fe-settings me-2"></i>More</a></li>
+                                </ul>
+                            </div>
+                            <a href="javascript:void(0);" class="header-cart-remove dropdown-item-close1"><i
+                                    class="bi bi-trash3"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="p-3 empty-header-item1">
+                <div class="d-grid">
+                    <a href="notifications-list.html" class="btn btn-primary">View All</a>
+                </div>
+            </div>
+            <div class="p-5 empty-item1 d-none">
+                <div class="text-center">
+                    <span class="avatar avatar-xl avatar-rounded bg-danger-transparent">
+                        <i class="ri-notification-off-line fs-2"></i>
+                    </span>
+                    <h6 class="fw-medium mt-3">No New Notifications</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Right-Sidebar -->
+
+    <!--Change password Modal -->
+    <div class="modal fade" id="changepasswordnmodal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change Password</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-3">
+                        <label class="form-label">New Password</label>
+                        <input type="password" class="form-control" placeholder="password" value="">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" placeholder="password" value="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</a>
+                    <a href="javascript:void(0);" class="btn btn-primary">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Change password Modal  -->
+
+    <!-- Scroll To Top -->
+    <div class="scrollToTop">
+        <span class="arrow"><i class="fe fe-chevrons-up"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+    <!-- Scroll To Top -->
+
+    <!-- Bootstrap JS -->
+    <script src="../dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="../dist/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="../dist/assets/js/simplebar.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../dist/assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../dist/assets/js/custom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<script>
+
+    $(document).ready(function () {
+        // Variables for modal editor
+        let currentImage = null;
+        let clickedImg = null;
+        let canvas = document.getElementById('editCanvas');
+        let ctx = canvas.getContext('2d');
+        let editingMode = null; // "text" or "rect"
+        let textToAdd = "";
+        let startX, startY;
+        let isDrawing = false;
+        let shapes = [];
+        const textHelper = $('#textHelper');
+        const editModal = new bootstrap.Modal(document.getElementById('editModal'), {});
+
+        // ---------- Helper: Redraw canvas ----------
+        function redrawCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (currentImage) ctx.drawImage(currentImage, 0, 0);
+            shapes.forEach(s => {
+                if (s.type === "rect") {
+                    ctx.strokeStyle = "red";
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(s.x, s.y, s.w, s.h);
+                } else if (s.type === "text") {
+                    ctx.fillStyle = "blue";
+                    ctx.font = "30px Arial";
+                    ctx.fillText(s.text, s.x, s.y);
+                }
+            });
+        }
+
+        // ---------- Setup file preview for a row ----------
+        function setupFilePreview(row) {
+            const fileInput = row.find('.fileInputRow');
+            const previewContainer = row.find('.previewContainerRow');
+            const clearBtn = row.find('.clearBtnRow');
+
+            fileInput.off('change').on('change', function () {
+                previewContainer.empty();
+                const files = this.files;
+                Array.from(files).forEach(file => {
+                    if (file.type.startsWith('image/')) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            const img = $('<img>').attr('src', e.target.result)
+                                .addClass('img-thumbnail')
+                                .css({ height: '100px', objectFit: 'cover', marginRight: '5px', cursor: 'pointer' });
+                            previewContainer.append(img);
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            });
+
+            clearBtn.off('click').on('click', function () {
+                fileInput.val('');
+                previewContainer.empty();
+            });
+        }
+
+        // ---------- Initialize first row ----------
+        setupFilePreview($('#table-pembajaan-add tbody tr'));
+
+        // ---------- Add Row ----------
+        $('#addRowBtn').on('click', function () {
+            const lastRow = $('#table-pembajaan-add tbody tr:last');
+            const newRow = lastRow.clone();
+
+            // Clear inputs
+            newRow.find('input[type="file"]').val('');
+            newRow.find('.previewContainerRow').empty();
+            newRow.find('textarea').val('');
+
+            // Append new row
+            $('#table-pembajaan-add tbody').append(newRow);
+
+            // Setup file preview for new row
+            setupFilePreview(newRow);
+        });
+
+        // ---------- Modal editor ----------
+        // Event delegation for any image
+        $(document).on('click', '.previewContainerRow img', function () {
+            clickedImg = $(this);
+            const clickedSrc = clickedImg.attr('src');
+            currentImage = new Image();
+            currentImage.src = clickedSrc;
+            currentImage.onload = function () {
+                canvas.width = currentImage.width;
+                canvas.height = currentImage.height;
+                shapes = [];
+                editingMode = null;
+                textHelper.hide();
+                editModal.show();
+                redrawCanvas();
+            }
+        });
+
+        // Add text
+        $('#addTextBtn').on('click', function () {
+            textToAdd = prompt("Enter text:");
+            if (textToAdd) {
+                editingMode = "text";
+                textHelper.show();
+            }
+        });
+
+        // Draw rectangle
+        $('#drawRectBtn').on('click', function () {
+            editingMode = "rect";
+            textHelper.hide();
+        });
+
+        // Undo
+        $('#undoBtn').on('click', function () {
+            if (shapes.length > 0) {
+                shapes.pop();
+                redrawCanvas();
+            }
+        });
+
+        // Canvas events
+        canvas.addEventListener('mousemove', function (e) {
+            if (editingMode === "text") {
+                const rect = canvas.getBoundingClientRect();
+                textHelper.css({ left: e.clientX - rect.left + 10, top: e.clientY - rect.top + 10 });
+            } else {
+                textHelper.hide();
+            }
+        });
+
+        canvas.addEventListener('mousedown', function (e) {
+            if (!editingMode) return;
+            const rect = canvas.getBoundingClientRect();
+            startX = e.clientX - rect.left;
+            startY = e.clientY - rect.top;
+
+            if (editingMode === "rect") isDrawing = true;
+            if (editingMode === "text" && textToAdd) {
+                shapes.push({ type: "text", x: startX, y: startY, text: textToAdd });
+                redrawCanvas();
+                editingMode = null;
+                textHelper.hide();
+            }
+        });
+
+        canvas.addEventListener('mouseup', function (e) {
+            if (editingMode === "rect" && isDrawing) {
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+                shapes.push({ type: "rect", x: startX, y: startY, w: mouseX - startX, h: mouseY - startY });
+                isDrawing = false;
+                editingMode = null;
+                redrawCanvas();
+            }
+        });
+
+        // Delete on double-click
+        canvas.addEventListener('dblclick', function (e) {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+            for (let i = shapes.length - 1; i >= 0; i--) {
+                const s = shapes[i];
+                if (s.type === "rect" && mouseX >= s.x && mouseX <= s.x + s.w && mouseY >= s.y && mouseY <= s.y + s.h) {
+                    shapes.splice(i, 1);
+                    redrawCanvas();
+                    break;
+                } else if (s.type === "text") {
+                    ctx.font = "30px Arial";
+                    const width = ctx.measureText(s.text).width;
+                    const height = 30;
+                    if (mouseX >= s.x && mouseX <= s.x + width && mouseY >= s.y - 20 && mouseY <= s.y) {
+                        shapes.splice(i, 1);
+                        redrawCanvas();
+                        break;
+                    }
+                }
+            }
+        });
+
+        // Save changes
+        $('#saveImageBtn').on('click', function () {
+            if (currentImage && clickedImg) {
+                const dataURL = canvas.toDataURL("image/png");
+                clickedImg.attr('src', dataURL); // update correct image
+                currentImage = new Image();
+                currentImage.src = dataURL;
+                shapes = [];
+                editModal.hide();
+                textHelper.hide();
+            }
+        });
+
+    });
+</script>
+
+</html>

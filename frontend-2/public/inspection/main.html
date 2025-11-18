@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="dark" data-toggled="close">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inspection Report System</title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="html template, dashboard template, admin template, dashboard, admin, html css templates, bootstrap template, hr dashboard, dashboard html css, employee dashboard, admin dashboard bootstrap, admin panel bootstrap, bootstrap admin, dashboard css, project dashboard">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../dist/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link id="style" href="../dist/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Dayone CSS -->
+    <link href="../dist/assets/css/styles.min.css" rel="stylesheet">
+    <link href="../dist/assets/css/icons.css" rel="stylesheet">
+
+    <!-- Optional Plugin CSS -->
+    <link href="../dist/assets/libs/node-waves/waves.min.css" rel="stylesheet">
+    <link href="../dist/assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../dist/assets/libs/@simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="../dist/assets/libs/quill/quill.snow.css">
+    <link rel="stylesheet" href="../dist/assets/libs/quill/quill.bubble.css">
+
+</head>
+
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="../dist/assets/images/media/loader.svg" alt="">
+    </div>
+    <!-- Loader -->
+
+    <div class="page">
+        <!-- app-header -->
+        <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="index.html" class="header-logo">
+                                <img src="../dist/assets/images/brand-logos/desktop-logo.png" alt="logo"
+                                    class="desktop-logo">
+                                <img src="../dist/assets/images/brand-logos/toggle-logo.png" alt="logo"
+                                    class="toggle-logo">
+                                <img src="../dist/assets/images/brand-logos/desktop-dark.png" alt="logo"
+                                    class="desktop-dark">
+                                <img src="../dist/assets/images/brand-logos/toggle-dark.png" alt="logo"
+                                    class="toggle-dark">
+                                <img src="../dist/assets/images/brand-logos/desktop-white.png" alt="logo"
+                                    class="desktop-white">
+                                <img src="../dist/assets/images/brand-logos/toggle-white.png" alt="logo"
+                                    class="toggle-white">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a aria-label="Hide Sidebar"
+                            class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
+                            data-bs-toggle="sidebar" href="javascript:void(0);">
+                            <span>
+
+                            </span>
+                        </a>
+                        <!-- End::header-link -->
+                        <!-- Start::header-search -->
+                        <div class="mt-0">
+                            <form class="form-inline d-none d-lg-block">
+                                <div class="search-element">
+                                    <input type="search" class="form-control header-search" placeholder="Search…"
+                                        aria-label="Search" tabindex="1">
+                                    <button class="btn">
+                                        <i class="fe fe-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- End::header-search -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-search d-lg-none">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="header-link-icon" height="24px"
+                                viewBox="0 0 24 24" width="24px" fill="#000000">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                            </svg>
+                        </a>
+
+                        <ul class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <li>
+                                <span class="dropdown-item d-flex align-items-center">
+                                    <span class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search..."
+                                            aria-label="Search input" aria-describedby="button-addon2">
+                                        <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-theme-mode">
+                        <!-- Start::header-link|layout-setting -->
+                        <a href="javascript:void(0);" class="header-link layout-setting">
+                            <span class="light-layout lh-1">
+                                <!-- Start::header-link-icon -->
+                                <i class="fe fe-moon header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                            <span class="dark-layout lh-1">
+                                <!-- Start::header-link-icon -->
+                                <i class="fe fe-sun header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                        </a>
+                        <!-- End::header-link|layout-setting -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element country-selector">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown">
+                            <img src="../dist/assets/images/flags/6.jpg" alt="img" class="rounded-circle">
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/5.jpg" alt="img">
+                                    </span>
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/4.jpg" alt="img">
+                                    </span>
+                                    Spanish
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/6.jpg" alt="img">
+                                    </span>
+                                    French
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/1.jpg" alt="img">
+                                    </span>
+                                    German
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/2.jpg" alt="img">
+                                    </span>
+                                    Italian
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="../dist/assets/images/flags/3.jpg" alt="img">
+                                    </span>
+                                    Russian
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element cart-dropdown">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown">
+                            <i class="fe fe-mail header-link-icon"></i>
+                            <span class="badge bg-success rounded-pill header-icon-badge" id="cart-icon-badge">5</span>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-medium">You have messages</p>
+                                    <span class="badge bg-success-transparent" id="cart-data">5 Items</span>
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="dropdown-divider">
+                            </div>
+                            <ul class="list-unstyled mb-0" id="header-cart-items-scroll">
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/1.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Jack Wright</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>All the best your template awesome</li>
+                                                    <li class="text-muted">3 hours ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/3.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Lisa Rutherford</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Hey! there I'm available</li>
+                                                    <li class="text-muted">5 hour ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/5.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Blake Walker</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Just created a new blog post</li>
+                                                    <li class="text-muted">45 mintues ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/4.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Fiona Morrison</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Added new comment on your photo</li>
+                                                    <li class="text-muted">2 days ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start cart-dropdown-item">
+                                        <img src="../dist/assets/images/users/6.jpg" alt="img"
+                                            class="avatar avatar-md avatar-rounded br-5 me-3">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-start justify-content-between mb-0">
+                                                <div class="mb-0 fs-13 text-dark fw-medium">
+                                                    <a href="chat.html">Stewart Bond</a>
+                                                </div>
+                                                <div>
+                                                    <a href="javascript:void(0);"
+                                                        class="header-cart-remove float-end dropdown-item-close"><i
+                                                            class="bi bi-x-octagon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="min-w-fit-content d-flex align-items-start justify-content-between">
+                                                <ul class="header-product-item d-flex">
+                                                    <li>Your payment invoice is generated</li>
+                                                    <li class="text-muted">3 days ago</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="p-3 empty-header-item border-top">
+                                <div class="d-grid">
+                                    <a href="chat.html" class="btn btn-primary">See All Messages</a>
+                                </div>
+                            </div>
+                            <div class="p-5 empty-item d-none">
+                                <div class="text-center">
+                                    <span class="avatar avatar-xl avatar-rounded bg-warning-transparent">
+                                        <i class="ri-chat-2-line fs-2"></i>
+                                    </span>
+                                    <h6 class="fw-bold mb-1 mt-3">Your Inbox is Empty</h6>
+                                    <span class="mb-3 fw-normal fs-13 d-block">See more messages in chat page :)</span>
+                                    <a href="Chat.html" class="btn btn-primary btn-wave btn-sm m-1"
+                                        data-abc="true">continue Viewing <i class="bi bi-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-shortcuts-dropdown d-none d-lg-flex">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" id="notificationDropdown" aria-expanded="false">
+                            <i class="fe fe-grid header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown header-shortcuts-dropdown dropdown-menu pb-0 dropdown-menu-end"
+                            aria-labelledby="notificationDropdown">
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-medium">Related Apps</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider mb-0"></div>
+                            <div class="main-header-shortcuts p-3" id="header-shortcut-scroll">
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <a href="full-calendar.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar fs-23 bg-success-transparent p-2 mb-2">
+                                                    <i class='bx bx-calendar text-success'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Calendar</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="email-inbox.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar  fs-23 bg-info-transparent p-2 mb-2">
+                                                    <i class='bx bx-envelope  text-info'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Mail</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="profile-1.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar bg-warning-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-user  text-warning'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Profile</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="chat.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar    bg-pink-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-chat text-pink'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Chat</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="contact-list.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar    bg-secondary-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-phone text-secondary'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Contacts</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="settings.html">
+                                            <div class="text-center p-3 related-app border">
+                                                <span class="avatar    bg-teal-transparent fs-23 bg p-2 mb-2">
+                                                    <i class='bx bx-cog text-teal'></i>
+                                                </span>
+                                                <span class="d-block fs-13 fw-normal">Settings</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-fullscreen">
+                        <!-- Start::header-link -->
+                        <a onclick="openFullscreen();" href="javascript:void(0);" class="header-link">
+                            <i class="fe fe-maximize full-screen-open header-link-icon"></i>
+                            <i class="fe fe-minimize full-screen-close header-link-icon d-none"></i>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element notifications-dropdown">
+                        <!-- Start::header-link|notification-rights -->
+                        <a href="javascript:void(0);" class="header-link" data-bs-toggle="offcanvas"
+                            data-bs-target="#notification-sidebar-canvas" id="messageDropdown">
+                            <i class="fe fe-bell header-link-icon"></i>
+                            <span class="bg-dot"></span>
+                        </a>
+                        <!-- End::header-link|notification-rights -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element main-header-profile">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle mx-0 w-100"
+                            id="mainHeaderProfile" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            aria-expanded="false">
+                            <div>
+                                <img src="../dist/assets/images/users/16.jpg" alt="img"
+                                    class="rounded-3 avatar avatar-md">
+                            </div>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu pt-0 header-profile-dropdown dropdown-menu-end"
+                            aria-labelledby="mainHeaderProfile">
+                            <Li>
+                                <div class="p-3 text-center border-bottom">
+                                    <a href="profile-1.html" class="text-center fw-semibold">John Thomson</a>
+                                    <p class="text-center user-semi-title fs-13 mb-0">App Developer</p>
+                                </div>
+                            </Li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="profile-1.html"><i
+                                        class="fe fe-user me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="email-inbox.html"><i
+                                        class="fe fe-mail me-2"></i>Inbox <span
+                                        class="badge bg-success-transparent ms-auto">25</span></a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="editprofile.html"><i
+                                        class="fe fe-settings me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"
+                                    data-bs-toggle="modal" data-bs-target="#changepasswordnmodal"><i
+                                        class="fe fe-edit-3 me-2"></i>Change Password</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="chat.html"><i
+                                        class="fe fe-headphones me-2"></i>Support</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="login-1.html"><i
+                                        class="fe fe-power me-2"></i>Log Out</a></li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link|switcher-icon -->
+                        <a href="javascript:void(0);" class="header-link switcher-icon" data-bs-toggle="offcanvas"
+                            data-bs-target="#switcher-canvas">
+                            <i class="fe fe-settings header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+
+
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <!-- Start::main-sidebar-header -->
+            <div class="main-sidebar-header">
+                <a href="index.html" class="header-logo">
+                    <img src="../dist/assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+                    <img src="../dist/assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+                    <img src="../dist/assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+                    <img src="../dist/assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+                    <img src="../dist/assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
+                    <img src="../dist/assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white">
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+
+            <!-- Start::main-sidebar -->
+            <div class="main-sidebar" id="sidebar-scroll">
+
+                <!-- Start::nav -->
+                <nav class="main-menu-container nav nav-pills flex-column sub-open">
+                    <!-- Start::Sidebar User -->
+                    <div class="app-sidebar__user mb-3">
+                        <div class="dropdown user-pro-body text-center user-pic">
+                            <span class="avatar avatar-xxl online avatar-rounded">
+                                <img src="../dist/assets/images/users/16.jpg" alt="img">
+                            </span>
+                            <div class="user-info mt-1">
+                                <h5 class=" mb-1">Faheem Ahmad</h5>
+                                <span class="text-muted app-sidebar__user-name text-sm">Inspector</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End::Sidebar User -->
+                    <div class="slide-left" id="slide-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                        </svg>
+                    </div>
+                    <ul class="main-menu">
+
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="fe fe-home side-menu__icon"></i>
+                                <span class="side-menu__label">Dashboards</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Dashboards</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+
+                    </ul>
+
+                </nav>
+                <!-- End::nav -->
+
+            </div>
+            <!-- End::main-sidebar -->
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Page Header -->
+                <div class="page-header d-lg-flex d-block">
+                    <div class="page-leftheader">
+                        <div class="page-title">Inspection Report</div>
+                    </div>
+                    <div class="page-rightheader">
+                        <div class="btn-list">
+                            <a href="hr-attmark.html" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#addnoticemodal">Create New report</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Header Close -->
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card custom-card">
+                            <div class="card-header  border-0">
+                                <h5 class="card-title">List Of Inspection Report</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-2 gap-1 gap-lg-0">
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <span>Show</span>
+                                            <div class="d-flex ms-2 mx-2">
+                                                <div class="form-group mb-0">
+                                                    <select name="quantity" id="select-countries17"
+                                                        class="form-control  wd-150" data-trigger>
+                                                        <option value="1" selected="">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <span>entries</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="float-end">
+                                            <input type="text" class="form-control" placeholder="search">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table  table-vcenter text-nowrap table-bordered border-bottom"
+                                        id="hr-notice">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-bottom-0 w-5">No</th>
+                                                <th class="border-bottom-0">Report No</th>
+                                                <th class="border-bottom-0">Report Date</th>
+                                                <th class="border-bottom-0">Equipment</th>
+                                                <th class="border-bottom-0">Equipment Tag</th>
+                                                <th class="border-bottom-0">Plant</th>
+                                                <th class="border-bottom-0">DOSH Registration No</th>
+                                                <th class="border-bottom-0">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>PLANT1/VI/R-001/TA2025</td>
+                                                <td>10/03/2025</td>
+                                                <td>Reactor</td>
+                                                <td>R-001</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1001</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <td>PLANT1/VI/T-002/TA2025</td>
+                                                <td>12/03/2025</td>
+                                                <td>Column Tower</td>
+                                                <td>T-002</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1002</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>03</td>
+                                                <td>PLANT1/VI/C-003/TA2025</td>
+                                                <td>15/03/2025</td>
+                                                <td>Condenser</td>
+                                                <td>C-003</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1003</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>04</td>
+                                                <td>PLANT1/VI/B-004/TA2025</td>
+                                                <td>18/03/2025</td>
+                                                <td>Bullet</td>
+                                                <td>B-004</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1004</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>05</td>
+                                                <td>PLANT1/VI/S-005/TA2025</td>
+                                                <td>20/03/2025</td>
+                                                <td>Sphere</td>
+                                                <td>S-005</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1005</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>06</td>
+                                                <td>PLANT1/VI/A-006/TA2025</td>
+                                                <td>22/03/2025</td>
+                                                <td>Accumulator</td>
+                                                <td>A-006</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1006</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>07</td>
+                                                <td>PLANT1/VI/HX-007/TA2025</td>
+                                                <td>25/03/2025</td>
+                                                <td>Heat Exchanger</td>
+                                                <td>HX-007</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1007</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>08</td>
+                                                <td>PLANT1/VI/SEP-008/TA2025</td>
+                                                <td>27/03/2025</td>
+                                                <td>Separator</td>
+                                                <td>SEP-008</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1008</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>09</td>
+                                                <td>PLANT1/VI/R-009/TA2025</td>
+                                                <td>29/03/2025</td>
+                                                <td>Reactor</td>
+                                                <td>R-009</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1009</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>10</td>
+                                                <td>PLANT1/VI/T-010/TA2025</td>
+                                                <td>31/03/2025</td>
+                                                <td>Column Tower</td>
+                                                <td>T-010</td>
+                                                <td>Plant 1</td>
+                                                <td>MK PMT 1010</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="modal" data-bs-target="#editnoticemodal"><i
+                                                                class="fe fe-eye primary text-primary"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Edit/View"></i></a>
+                                                        <a href="javascript:void(0);" class="action-btns1"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            title="Delete"><i class="fe fe-trash-2 text-danger"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Start::pagination -->
+                                <nav class="mt-4">
+                                    <ul class="pagination justify-content-end mb-0">
+                                        <li class="page-item disabled"><a class="page-link"
+                                                href="javascript:void(0);">Prev</a></li>
+                                        <li class="page-item active"><a class="page-link"
+                                                href="javascript:void(0);">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- End::pagination -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        <!-- Start Right-Sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="notification-sidebar-canvas"
+            aria-labelledby="offcanvasRightLabel1">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title text-default fs-17 fw-medium" id="offcanvasRightLabel1">Notifications <span
+                        class="badge bg-danger-transparent" id="notifiation-data">11 Unread</span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-0 sidebar-right">
+                <div id="header-notification-scroll">
+                    <div class="list-group-item  align-items-center border-start-0 border-end-0 border-top-0">
+                        <div class="d-flex">
+                            <span class="avatar avatar-lg me-3 avatar-rounded">
+                                <img src="../dist/assets/images/users/4.jpg" alt="img">
+                            </span>
+                            <div class="w-65">
+                                <a href="javascript:void(0);" class="fw-medium fs-16">Liam <span
+                                        class="text-muted fw-normal">Sent Message</span></a>
+                                <span class="clearfix"></span>
+                                <span class="text-muted fs-13 ms-auto d-inline-block"><i
+                                        class="mdi mdi-clock text-muted me-1"></i>30 mins ago</span>
+                            </div>
+                            <div class="ms-auto">
+                                <div class="text-end">
+                                    <a href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="fe fe-more-horizontal p-1 text-muted"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="javascript:void(0);"><i
+                                                    class="fe fe-eye me-2"></i>View</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);"><i
+                                                    class="fe fe-plus-circle me-2"></i>Add</a></li>
+                                        <!-- <li><a class="dropdown-item" href="javascript:void(0);"><i class="fe fe-trash-2 me-2"></i>Remove</a></li> -->
+                                        <li><a class="dropdown-item" href="javascript:void(0);"><i
+                                                    class="fe fe-settings me-2"></i>More</a></li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:void(0);" class="header-cart-remove dropdown-item-close1"><i
+                                        class="bi bi-trash3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="p-3 empty-header-item1">
+                    <div class="d-grid">
+                        <a href="notifications-list.html" class="btn btn-primary">View All</a>
+                    </div>
+                </div>
+                <div class="p-5 empty-item1 d-none">
+                    <div class="text-center">
+                        <span class="avatar avatar-xl avatar-rounded bg-danger-transparent">
+                            <i class="ri-notification-off-line fs-2"></i>
+                        </span>
+                        <h6 class="fw-medium mt-3">No New Notifications</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Right-Sidebar -->
+
+
+        <!--Change password Modal -->
+        <div class="modal fade" id="changepasswordnmodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Change Password</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group mb-3">
+                            <label class="form-label">New Password</label>
+                            <input type="password" class="form-control" placeholder="password" value="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" placeholder="password" value="">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</a>
+                        <a href="javascript:void(0);" class="btn btn-primary">Confirm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Change password Modal  -->
+
+        <!-- Add leave Modal -->
+        <!-- <div class="modal fade" id="addnoticemodal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add New Notice</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group mb-3">
+                            <label class="form-label">Title</label>
+                            <input class="form-control" placeholder="Text">
+                        </div>
+                        <div class="form-group mb-3 d-flex">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="toEmployees">
+                                <label class="form-check-label" for="toEmployees">
+                                    To Employees
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="toClients">
+                                <label class="form-check-label" for="toClients">
+                                    To Clients
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Select Date:</label>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-text text-muted"> <i class="ri-calendar-line"></i> </div>
+                                    <input type="text" class="form-control choose-date" placeholder="DD-MM-YYYY">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="fw-medium form-label">Description:</label>
+                            <div id="editor"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Attachment:</label>
+                            <div class="form-group">
+                                <input class="form-control" type="file">
+                            </div>
+                        </div>
+                        <div class="form-group mb-0 d-flex">
+                            <label class="form-label me-5">Status :</label>
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="toEmployee1">
+                                <label class="form-check-label" for="toEmployee1">
+                                    To Employees
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="toClients3">
+                                <label class="form-check-label" for="toClients3">
+                                    To Clients
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Add leave Modal -->
+
+        <!-- Edit Notice Modal -->
+        <!-- <div class="modal fade" id="editnoticemodal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Leaves</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group mb-3">
+                            <label class="form-label">Title</label>
+                            <input class="form-control" placeholder="Text" value="Board meeting Completed">
+                        </div>
+                        <div class="form-group mb-3 d-flex">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="toEmployee2">
+                                <label class="form-check-label" for="toEmployee2">
+                                    To Employees
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="toClients2">
+                                <label class="form-check-label" for="toClients2">
+                                    To Clients
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Select Date:</label>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-text text-muted"> <i class="ri-calendar-line"></i> </div>
+                                    <input type="text" class="form-control choose-date" placeholder="DD-MM-YYYY">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="fw-medium form-label">Description:</label>
+                            <div id="editor1"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Attachment:</label>
+                            <input class="form-control" type="file">
+                        </div>
+                        <div class="form-group mb-0 d-flex">
+                            <label class="form-label me-5">Status :</label>
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="active1">
+                                <label class="form-check-label" for="active1">
+                                    Active
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="inactive1">
+                                <label class="form-check-label" for="inactive1">
+                                    Inactive
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Edit Notice Modal -->
+
+    </div>
+
+
+    <!-- Scroll To Top -->
+    <div class="scrollToTop">
+        <span class="arrow"><i class="fe fe-chevrons-up"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+    <!-- Scroll To Top -->
+
+    <!-- Popper JS -->
+    <script src="../dist/assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../dist/assets/js/defaultmenu.min.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="../dist/assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../dist/assets/js/sticky.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="../dist/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="../dist/assets/js/simplebar.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../dist/assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+
+    <!-- Quill Editor JS -->
+    <script src="../dist/assets/libs/quill/quill.min.js"></script>
+
+    <!-- Date & Time Picker JS -->
+    <script src="../dist/assets/libs/flatpickr/flatpickr.min.js"></script>
+
+    <!-- HR notice JS -->
+    <script src="../dist/assets/js/hr-notice.js"></script>
+
+    <!-- Default date picker js-->
+    <script src="../dist/assets/js/default-flat-datepicker.js"></script>
+
+
+    <!-- Custom-Switcher JS -->
+    <script src="../dist/assets/js/custom-switcher.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../dist/assets/js/custom.js"></script>
+
+</body>
+
+</html>
